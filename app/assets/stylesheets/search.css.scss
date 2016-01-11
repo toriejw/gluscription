@@ -1,0 +1,43 @@
+$header-font-size: 200%;
+$p-font-size: 150%;
+$disclaimer-font-size: 50%;
+
+$font-color: #e6e6e6;
+$link-hover-color: #97979e;
+
+
+.search-page-header {
+  font-size: $header-font-size;
+  color: $font-color;
+}
+
+p {
+  font-size: $p-font-size;
+}
+
+a {
+  color: $font-color;
+}
+
+a:hover {
+  color: $link-hover-color;
+  text-decoration: none;
+}
+
+.nav-pills a:hover {
+  color: black;
+}
+
+.disclaimer {
+  color: $font-color;
+  font-size: $disclaimer-font-size;
+}
+
+.btn {
+  width: 30%;
+  color: black;
+}
+
+.btn:hover {
+  color: black;
+}

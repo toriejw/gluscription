@@ -1,2 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "search.css.scss";
+
+$font-color: #c9c9cf;
+$background-color: #003cb3;
+
+body {
+  background-color: $background-color;
+}
+
+* {
+  font-color: $font-color;
+}

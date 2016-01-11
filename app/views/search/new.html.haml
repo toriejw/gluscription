@@ -1,0 +1,56 @@
+%br
+%br
+%br
+%br
+%br
+
+.row
+  .col-md-2
+  .col-md-8.text-center
+    %h1.search-page-header Type in the name of a prescription drug below to find out if it's gluten-free:
+  .col-md-2
+
+%br
+%br
+
+.row
+  .col-md-3
+  .col-md-6.text-center
+    %br
+    %form
+      .form-group
+        %input{ type: "text", class: "form-control", placeholder: "eg. synthroid" }
+
+      %button{ type: "submit", class: "btn btn-info"} Search
+  .col-md-3
+
+%br
+%br
+%br
+%br
+%br
+
+.row
+  .col-md-4
+  .col-md-4
+    %p.search-page-text.text-center
+      = link_to "Find out how we determine if a drug is gluten-free", root_path
+  .col-md-4
+
+%br
+%br
+%br
+%br
+%br
+
+.row
+  .col-md-3
+  .col-md-6
+    .disclaimer.text-center
+      %p
+        Drug information comes from the FDA, who provide it with the following disclaimer:
+      %p
+        "FDA hereby disclaim all warranties of any kind, express or implied, including without limitation the warranties of merchantability, fitness for a particular purpose, and non-infringement. FDA makes no warranty that openFDA data will be error free or that access thereto will be continuous or uninterrupted"
+      %p
+        Gluscription cannot therefore guarantee that the results of this site are error-free.
+  .col-md-3
