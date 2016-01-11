@@ -1,0 +1,48 @@
+%br
+
+%h1.text-center.users-page-header Hi, username. Here are your past searches:
+
+%br
+%br
+
+.row
+  .col-md-1
+  .col-md-10
+    .well
+      .row.text-center
+        .col-md-1
+        .col-md-3
+          %h2 Prescription
+        .col-md-3
+          %h2 Gluten-free?
+        .col-md-3
+          %h2 Additional information
+        .col-md-1
+
+      .row
+        .col-md-1
+        .col-md-10
+          %hr
+        .col-md-1
+
+      .row.text-center
+        .col-md-1
+        .col-md-3
+          %p.past-search-data name
+        .col-md-3
+          %p.past-search-data Yes/No/Maybe
+        .col-md-3
+          %p.past-search-data ingredients maybeh
+        .col-md-1
+
+  .col-md-1
+
+%br
+%br
+
+.row
+  .col-md-3
+  .col-md-6.text-center
+    %form{ action: "/" }
+      %button{ type: "submit", class: "btn btn-info"} New Search
+  .col-md-3

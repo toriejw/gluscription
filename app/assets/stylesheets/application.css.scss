@@ -9,7 +9,6 @@ $header-font-size: 200%;
 $p-font-size: 150%;
 $disclaimer-font-size: 50%;
 
-
 body {
   background-color: $background-color;
 }
@@ -20,3 +19,4 @@ body {
 
 @import "search.scss";
 @import "results.scss";
+@import "users.scss";
