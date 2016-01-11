@@ -17,6 +17,7 @@ gem 'simplecov'
 
 group :development, :test do
   gem 'byebug'
+  gem 'capybara'
 end
 
 group :development do
