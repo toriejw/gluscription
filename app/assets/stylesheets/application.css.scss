@@ -1,9 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "search.css.scss";
 
-$font-color: #c9c9cf;
+$font-color: #e6e6e6;
+$link-hover-color: #97979e;
 $background-color: #003cb3;
+
+$header-font-size: 200%;
+$p-font-size: 150%;
+$disclaimer-font-size: 50%;
+
 
 body {
   background-color: $background-color;
@@ -12,3 +17,6 @@ body {
 * {
   font-color: $font-color;
 }
+
+@import "search.scss";
+@import "results.scss";

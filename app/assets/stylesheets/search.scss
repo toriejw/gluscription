@@ -1,3 +1,35 @@
-// Place all the styles related to the search controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.search-page-header {
+  font-size: $header-font-size;
+  color: $font-color;
+}
+
+p {
+  font-size: $p-font-size;
+}
+
+a {
+  color: $font-color;
+}
+
+a:hover {
+  color: $link-hover-color;
+  text-decoration: none;
+}
+
+.nav-pills a:hover {
+  color: black;
+}
+
+.disclaimer {
+  color: $font-color;
+  font-size: $disclaimer-font-size;
+}
+
+.btn {
+  width: 30%;
+  color: black;
+}
+
+.btn:hover {
+  color: black;
+}
