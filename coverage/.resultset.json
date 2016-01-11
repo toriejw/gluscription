@@ -1,7 +1,28 @@
 {
   "MiniTest": {
     "coverage": {
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/controllers/search_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/helpers/search_helper.rb": [
+        1,
+        null
+      ]
     },
-    "timestamp": 1452532667
+    "timestamp": 1452533401
   }
 }
