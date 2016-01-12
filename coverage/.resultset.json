@@ -1,6 +1,68 @@
 {
   "MiniTest": {
     "coverage": {
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/models/drug.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/services/rx_norm_service.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/services/open_fda_service.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        null
+      ],
       "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/controllers/search_controller.rb": [
         1,
         1,
@@ -40,16 +102,9 @@
         1,
         null,
         null
-      ],
-      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/models/drug.rb": [
-        1,
-        1,
-        null,
-        null,
-        null
       ]
     },
-    "timestamp": 1452631637
+    "timestamp": 1452635679
   },
   "Unit Tests": {
     "coverage": {
@@ -116,7 +171,7 @@
         null
       ]
     },
-    "timestamp": 1452634716
+    "timestamp": 1452635535
   },
   "Unknown Test Framework": {
     "coverage": {

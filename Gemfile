@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.2.4'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
@@ -22,6 +21,8 @@ group :development, :test do
   gem 'pry'
   gem 'capybara'
   gem 'simplecov'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do
