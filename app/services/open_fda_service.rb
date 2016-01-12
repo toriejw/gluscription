@@ -1,10 +1,10 @@
 require "hurley"
 
 class OpenFDAService
-  
-  def self.call(search_terms)
+
+  def self.return_raw_data(search_terms)
     response = Hurley.get("https://api.fda.gov/drug/label.json?search=inactive_ingredient:#{search_terms}")
-    response.body
+    JSON.parse(response.body)
   end
 
 end

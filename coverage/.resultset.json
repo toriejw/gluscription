@@ -55,10 +55,48 @@
     "coverage": {
       "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/models/drug.rb": [
         1,
+        null,
+        1,
         1,
         null,
         1,
         1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/services/rx_norm_service.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
         1,
         1,
         null,
@@ -69,6 +107,8 @@
         1,
         null,
         1,
+        null,
+        1,
         1,
         1,
         null,
@@ -76,7 +116,7 @@
         null
       ]
     },
-    "timestamp": 1452633016
+    "timestamp": 1452634716
   },
   "Unknown Test Framework": {
     "coverage": {
