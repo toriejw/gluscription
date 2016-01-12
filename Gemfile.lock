@@ -70,6 +70,7 @@ GEM
       activesupport (>= 4.1.0)
     haml (4.0.7)
       tilt
+    hurley (0.2)
     i18n (0.7.0)
     jbuilder (2.4.0)
       activesupport (>= 3.0.0, < 5.1)
@@ -177,6 +178,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.1.0)
   haml
+  hurley
   jbuilder (~> 2.0)
   jquery-rails
   pg

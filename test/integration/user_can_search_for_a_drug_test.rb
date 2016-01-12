@@ -10,7 +10,7 @@ class UserCanSearchForADrugTest < ActionDispatch::IntegrationTest
     assert page.has_content? "Drug information comes from the FDA, who provide it with the following disclaimer"
     assert page.has_button? "Search"
 
-    fill_in "prescription", with: "tylenol"
+    fill_in "drug", with: "tylenol"
     click_button "Search"
 
     assert_equal result_path, current_path

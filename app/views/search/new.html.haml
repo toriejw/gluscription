@@ -17,11 +17,10 @@
   .col-md-3
   .col-md-6.text-center
     %br
-    %form
+    = form_tag result_path do
       .form-group
-        %input{ type: "text", class: "form-control", placeholder: "eg. synthroid" }
-
-      %button{ type: "submit", class: "btn btn-info"} Search
+        = text_field_tag "drug", "eg. tylenol", maxlength: 50, class: "form-control"
+      = submit_tag "Search", class: "btn btn-info"
   .col-md-3
 
 %br
