@@ -3,14 +3,16 @@
 
 $font-color: #f2f2f2;
 $link-hover-color: #97979e;
-$background-color: #003cb3;
+// $background-color: #003cb3;
 
 $header-font-size: 200%;
 $p-font-size: 150%;
 $disclaimer-font-size: 50%;
 
 body {
-  background-color: $background-color;
+  // background-color: $background-color;
+  background-image: url("/assets/prescription.jpg");
+  background-size: 100%;
 }
 
 * {
