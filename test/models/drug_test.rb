@@ -44,4 +44,12 @@ class DrugTest < ActiveSupport::TestCase
     end
   end
 
+  test "it knows if ingredient list is unavailable" do
+    VCR.use_cassette("drug-with-no-ingredients-data") do
+      bee_venom = Drug.new("bee venom")
+
+      assert_equal :ingredients_not_listed, bee_venom.gluten_free?
+    end
+  end
+
 end

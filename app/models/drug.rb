@@ -21,7 +21,9 @@ class Drug
   end
 
   def gluten_free?
-    if contains_ingredients_with_gluten?
+    if !has_ingredients?
+      :ingredients_not_listed
+    elsif contains_ingredients_with_gluten?
       :false
     elsif contains_questionable_ingredients?
       :maybe
@@ -47,6 +49,13 @@ class Drug
   def full_ingredient_list
     inactive_ingredients + active_ingredients
   end
+  
+  def has_ingredients?
+    (@drug_data["results"][0]["inactive_ingredient"] &&
+    @drug_data["results"][0]["active_ingredient"] &&
+    raw_inactive_ingredients &&
+    raw_active_ingredients)
+  end
 
   private
 
@@ -64,16 +73,24 @@ class Drug
        "dusting powder",]
     end
 
+    def raw_inactive_ingredients
+      @drug_data["results"][0]["inactive_ingredient"][0]
+    end
+
+    def raw_active_ingredients
+      @drug_data["results"][0]["active_ingredient"][0]
+    end
+
     def inactive_ingredients
       # because ingredients are returned from api in multiple forms, I'm taking
       # all words and treating them as 'ingredients' by splitting on spaces instead
       # of commas
-      split_words = @drug_data["results"][0]["inactive_ingredient"][0].split(" ")
+      split_words = raw_inactive_ingredients.split(" ")
       format_words(split_words)
     end
 
     def active_ingredients
-      split_words = @drug_data["results"][0]["active_ingredient"][0].split(" ")
+      split_words = raw_active_ingredients.split(" ")
       format_words(split_words)
     end
 

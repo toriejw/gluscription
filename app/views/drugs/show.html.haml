@@ -8,17 +8,12 @@
       = @drug.name.upcase
       %br
       %br
-      - if @drug.gluten_free? == :true
-        is gluten-free!
-      - elsif @drug.gluten_free? == :maybe
-        may or may not be gluten-free.
-      - else
-        is NOT gluten-free :( !
+      = gluten_free_or_not_message(@drug)
 
     %br
 
-    %p.text-center
-      This is based on the following information from the FDA:
+    .text-center
+      = additional_info_or_search_again_button(@drug)
 
     %br
     %br

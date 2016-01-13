@@ -5,7 +5,7 @@ class RXnormService
   def self.find_drug_name(rxcui)
     response      = get_response(rxcui)
     json_response = parse_response(response)
-    
+
     return_name(json_response)
   end
 

@@ -27,17 +27,35 @@ class UserCanSearchForADrugTest < ActionDispatch::IntegrationTest
   end
 
   test "user sees not found notice when they search for a drug with no data" do
+    VCR.use_cassette("drug-search-no-data") do
+      visit root_path
+
+      fill_in "drug", with: "bee venom"
+      click_button "Search"
+      
+      assert_equal result_path, current_path
+      assert page.has_content? "Sorry, the FDA has not provided ingredients for this drug :("
+
+      click_button "Try another search"
+
+      assert_equal root_path, current_path
+    end
+  end
+
+  test "user sees not found notice when they search for a drug that's not in the database" do
     skip
-    visit root_path
+    VCR.use_cassette("drug-search-not-found") do
+      visit root_path
 
-    fill_in "prescription", with: "bee venom"
-    click_button "Search"
+      fill_in "drug", with: "synthroid"
+      click_button "Search"
 
-    assert_equal result_path, current_path
-    assert page.has_content? "Sorry, the FDA has not provided ingredients for this drug :("
+      assert_equal result_path, current_path
+      assert page.has_content? "Sorry, we couldn't find the drug you searched for."
 
-    click_button "Try another search"
+      click_button "Try another search"
 
-    assert_equal root_path, current_path
+      assert_equal root_path, current_path
+    end
   end
 end
