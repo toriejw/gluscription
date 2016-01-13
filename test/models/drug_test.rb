@@ -36,7 +36,7 @@ class DrugTest < ActiveSupport::TestCase
     VCR.use_cassette("drug#gluten_free?") do
       warfarin         = Drug.new("warfarin")
       tylenol          = Drug.new("tylenol")
-      drug_with_gluten = Drug.new("dextrin")
+      drug_with_gluten = Drug.new("rye")
 
       assert_equal :true, warfarin.gluten_free?
       assert_equal :maybe, tylenol.gluten_free?

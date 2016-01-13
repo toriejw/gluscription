@@ -38,6 +38,9 @@ class Drug
   end
 
   def contains_questionable_ingredients?
+    possible_gluten_containing_ingredients.each do |gluten_ingredient|
+      return true if full_ingredient_list.include?(gluten_ingredient)
+    end
     false
   end
 
@@ -52,6 +55,13 @@ class Drug
         "spelt", "dinkel", "farina", "farro", "faro", "graham", "khorasan",
         "einkorn", "triticale", "malt", "brewer's yeast", "wheat starch",
         "bulgur", "kamut", "matzo", "seitan", "atta", "fu", "couscous"]
+    end
+
+    def possible_gluten_containing_ingredients
+      ["oats", "oat flour", "flour", "grain flour", "starch", "dextrin",
+       "dextrate", "dextri-maltose", "maltodextrin", "starch", "modified start",
+       "pregelatinized starch", "pre-gelatinized starch", "sodium starch glycolate",
+       "dusting powder",]
     end
 
     def inactive_ingredients
