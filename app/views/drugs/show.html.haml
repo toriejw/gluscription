@@ -4,7 +4,13 @@
 %h1.results-page-header.text-center
   = @drug.name.upcase
   %br
-  is (not) gluten-free!
+  %br
+  - if @drug.gluten_free? == :true
+    is gluten-free!
+  - elsif @drug.gluten_free? == :maybe
+    may or may not be gluten-free.
+  - else
+    is NOT gluten-free :( !
 
 %br
 
