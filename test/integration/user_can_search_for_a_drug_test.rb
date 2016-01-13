@@ -6,7 +6,7 @@ class UserCanSearchForADrugTest < ActionDispatch::IntegrationTest
       visit root_path
 
       assert_equal "/", current_path
-      assert page.has_content? "Type in the name of a prescription drug"
+      assert page.has_content? "Type in the name of a prescription or OTC drug"
       assert page.has_link? "Find out how we determine if a drug is gluten-free"
       assert page.has_content? "Drug information comes from the FDA, who provide it with the following disclaimer"
       assert page.has_button? "Search"
@@ -15,7 +15,7 @@ class UserCanSearchForADrugTest < ActionDispatch::IntegrationTest
       click_button "Search"
 
       assert_equal result_path, current_path
-      
+
       assert page.has_content?("ACETAMINOPHEN 500 MG ORAL CAPSULE [MAPAP] may or may not be gluten-free.")
       # assert page.has_content?("Inactive ingredients:")
       # assert page.has_content?("FD&C Blue #1, FD&C Red #40, Gelatin, Polyvinylpyrrolidone, Pregelatinized Starch, Sodium Starch Glycolate, Stearic Acid, Titanium Dioxide")

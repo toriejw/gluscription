@@ -1,29 +1,33 @@
 %br
 %br
 
-%h1.results-page-header.text-center
-  = @drug.name.upcase
-  %br
-  %br
-  - if @drug.gluten_free? == :true
-    is gluten-free!
-  - elsif @drug.gluten_free? == :maybe
-    may or may not be gluten-free.
-  - else
-    is NOT gluten-free :( !
+.row
+  .col-md-1
+  .col-md-10.well.results-well
+    %h1.results-page-header.text-center
+      = @drug.name.upcase
+      %br
+      %br
+      - if @drug.gluten_free? == :true
+        is gluten-free!
+      - elsif @drug.gluten_free? == :maybe
+        may or may not be gluten-free.
+      - else
+        is NOT gluten-free :( !
 
-%br
+    %br
 
-%p.text-center
-  This is based on the following information from the FDA:
+    %p.text-center
+      This is based on the following information from the FDA:
 
-%br
-%br
-%br
+    %br
+    %br
+    %br
 
-%p.text-center.log-in-or-create-account
-  Want to save your searches?
-  %br
-  = link_to "Log in", "/"
-  or
-  = link_to "create an account", "/"
+    %p.text-center.log-in-or-create-account
+      Want to save your searches?
+      %br
+      = link_to "Log in", "/"
+      or
+      = link_to "create an account", "/"
+  .col-md-1
