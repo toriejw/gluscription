@@ -18,4 +18,17 @@ class DrugTest < ActiveSupport::TestCase
     end
   end
 
+  test "it knows whether or not it's gluten free" do
+    VCR.use_cassette("drug#gluten_free?") do
+      tylenol = Drug.new("tylenol")
+      warfarin = Drug.new("warfarin")
+      drug_with_gluten = Drug.new("dextrin")
+
+      assert tylenol.gluten_free?
+      assert warfarin.gluten_free?
+      
+      refute drug_with_gluten.gluten_free?
+    end
+  end
+
 end

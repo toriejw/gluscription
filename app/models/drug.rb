@@ -19,4 +19,8 @@ class Drug
   def get_drug_name
     RXnormService.find_drug_name(rxcui)
   end
+
+  def gluten_free?
+    true
+  end
 end
