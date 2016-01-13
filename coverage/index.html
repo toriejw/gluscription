@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-01-12T21:03:39-07:00">2016-01-12T21:03:39-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-01-12T21:17:34-07:00">2016-01-12T21:17:34-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>1</b> files in total.
-    <b>12</b> relevant lines. 
-    <span class="green"><b>12</b> lines covered</span> and
+    <b>5</b> relevant lines. 
+    <span class="green"><b>5</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -51,11 +51,11 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#a28b2810ad0074df37c0446b66c47dce84364817" class="src_link" title="app/services/rx_norm_service.rb">app/services/rx_norm_service.rb</a></td>
+        <td class="strong"><a href="#300dc6c9e1d498c6522a931cc6b21766f72a2b1f" class="src_link" title="app/services/open_fda_service.rb">app/services/open_fda_service.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>24</td>
-        <td>12</td>
-        <td>12</td>
+        <td>10</td>
+        <td>5</td>
+        <td>5</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -265,8 +265,8 @@
   <a name="Ungrouped"></a>
   <div>
     <b>1</b> files in total.
-    <b>12</b> relevant lines. 
-    <span class="green"><b>12</b> lines covered</span> and
+    <b>5</b> relevant lines. 
+    <span class="green"><b>5</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -284,11 +284,11 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#a28b2810ad0074df37c0446b66c47dce84364817" class="src_link" title="app/services/rx_norm_service.rb">app/services/rx_norm_service.rb</a></td>
+        <td class="strong"><a href="#300dc6c9e1d498c6522a931cc6b21766f72a2b1f" class="src_link" title="app/services/open_fda_service.rb">app/services/open_fda_service.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>24</td>
-        <td>12</td>
-        <td>12</td>
+        <td>10</td>
+        <td>5</td>
+        <td>5</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -308,13 +308,13 @@
     
       <div class="source_files">
       
-        <div class="source_table" id="a28b2810ad0074df37c0446b66c47dce84364817">
+        <div class="source_table" id="300dc6c9e1d498c6522a931cc6b21766f72a2b1f">
   <div class="header">
-    <h3>app/services/rx_norm_service.rb</h3>
+    <h3>app/services/open_fda_service.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>12</b> lines covered</span> and
+      <b>5</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -337,7 +337,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">class RXnormService</code>
+          <code class="ruby">class OpenFDAService</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -349,118 +349,34 @@
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.find_drug_name(rxcui)</code>
+          <code class="ruby">  def self.return_raw_data(search_terms)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">    response      = get_response(rxcui)</code>
+          <code class="ruby">    response = Hurley.get(&quot;https://api.fda.gov/drug/label.json?search=inactive_ingredient:#{search_terms}&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">    json_response = parse_response(response)</code>
+          <code class="ruby">    JSON.parse(response.body)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
           
           
-          <code class="ruby">    </code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="9">
           
-          <code class="ruby">    return_name(json_response)</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="11">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="12">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def self.get_response(rxcui)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    Hurley.get(&quot;https://rxnav.nlm.nih.gov/REST/rxcui/#{rxcui}/status.json&quot;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="14">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def self.parse_response(response)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    JSON.parse(response.body)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="18">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="19">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="20">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def self.return_name(json_response)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="21">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    json_response[&quot;rxcuiStatus&quot;][&quot;minConceptGroup&quot;][&quot;minConcept&quot;][0][&quot;name&quot;]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="22">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="23">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">end</code>
