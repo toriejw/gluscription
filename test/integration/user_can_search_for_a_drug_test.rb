@@ -57,4 +57,20 @@ class UserCanSearchForADrugTest < ActionDispatch::IntegrationTest
       assert_equal root_path, current_path
     end
   end
+
+  test "user sees not found notice when they search for a drug that doesn't return an rxcui" do
+    VCR.use_cassette("drug-search-with-no-rxcui") do
+      visit root_path
+
+      fill_in "drug", with: "t"
+      click_button "Search"
+
+      assert_equal result_path, current_path
+      assert page.has_content? "Sorry, we couldn't find the drug you searched for."
+
+      click_button "Try another search"
+
+      assert_equal root_path, current_path
+    end
+  end
 end

@@ -27,6 +27,18 @@
         null,
         null
       ],
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/services/open_fda_service.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        12,
+        12,
+        null,
+        null,
+        null
+      ],
       "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/models/drug.rb": [
         1,
         null,
@@ -34,8 +46,8 @@
         1,
         null,
         1,
-        10,
-        10,
+        11,
+        11,
         null,
         null,
         1,
@@ -43,12 +55,12 @@
         null,
         null,
         1,
-        10,
+        11,
         null,
         null,
         1,
-        10,
-        1,
+        11,
+        2,
         null,
         9,
         null,
@@ -133,17 +145,9 @@
         40671,
         null,
         null,
-        null
-      ],
-      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/services/open_fda_service.rb": [
-        1,
         null,
         1,
-        null,
-        1,
-        11,
-        11,
-        null,
+        10,
         null,
         null
       ],
@@ -163,7 +167,7 @@
       "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/helpers/application_helper.rb": [
         1,
         1,
-        3,
+        4,
         null,
         2,
         null,
@@ -179,8 +183,8 @@
         null,
         null,
         1,
+        4,
         3,
-        2,
         null,
         1,
         null,
@@ -204,13 +208,13 @@
         1,
         null,
         1,
-        3,
+        4,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1452723769
+    "timestamp": 1452724946
   },
   "Unit Tests": {
     "coverage": {

@@ -17,7 +17,7 @@ class Drug
   end
 
   def get_drug_name
-    if @drug_data["error"]
+    if @drug_data["error"] || missing_rxcui
       "not found"
     else
       RXnormService.find_drug_name(rxcui)
@@ -102,5 +102,9 @@ class Drug
       array.map do |word|
         word.gsub(",", "").downcase
       end
+    end
+
+    def missing_rxcui
+      !@drug_data["results"][0]["openfda"]["rxcui"]
     end
 end
