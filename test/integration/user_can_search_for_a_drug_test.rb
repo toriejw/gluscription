@@ -32,7 +32,7 @@ class UserCanSearchForADrugTest < ActionDispatch::IntegrationTest
 
       fill_in "drug", with: "bee venom"
       click_button "Search"
-      
+
       assert_equal result_path, current_path
       assert page.has_content? "Sorry, the FDA has not provided ingredients for this drug :("
 
@@ -43,7 +43,6 @@ class UserCanSearchForADrugTest < ActionDispatch::IntegrationTest
   end
 
   test "user sees not found notice when they search for a drug that's not in the database" do
-    skip
     VCR.use_cassette("drug-search-not-found") do
       visit root_path
 

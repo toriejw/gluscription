@@ -17,7 +17,11 @@ class Drug
   end
 
   def get_drug_name
-    RXnormService.find_drug_name(rxcui)
+    if @drug_data["error"]
+      "not found"
+    else
+      RXnormService.find_drug_name(rxcui)
+    end
   end
 
   def gluten_free?
@@ -49,7 +53,7 @@ class Drug
   def full_ingredient_list
     inactive_ingredients + active_ingredients
   end
-  
+
   def has_ingredients?
     (@drug_data["results"][0]["inactive_ingredient"] &&
     @drug_data["results"][0]["active_ingredient"] &&
