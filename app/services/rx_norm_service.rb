@@ -1,4 +1,4 @@
-require "hurley"
+# require "hurley"
 
 class RXnormService
 
@@ -10,7 +10,7 @@ class RXnormService
   end
 
   def self.get_response(rxcui)
-    Hurley.get("https://rxnav.nlm.nih.gov/REST/rxcui/#{rxcui}/status.json")
+    Faraday.get("https://rxnav.nlm.nih.gov/REST/rxcui/#{rxcui}/status.json")
   end
 
   def self.parse_response(response)

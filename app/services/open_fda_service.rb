@@ -1,4 +1,4 @@
-require "hurley"
+# require "hurley"
 
 class OpenFDAService
 
