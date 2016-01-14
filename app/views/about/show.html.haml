@@ -1,82 +1,82 @@
-
-.row
-  .col-md-3
-  .col-md-6
-    %h1.text-center Who we are
-    %br
-    %p
-      This website is built by a
-      = link_to "student", "https://toriejw.herokuapp.com"
-      at the
-      = link_to "Turing School of Software & Design.", "https://www.turing.io/"
-      I'm Torie, and this is my personal project for the 3rd module at Turing. My
-      grandmother and I both have celiacs, and want to make sure that our medications are gluten-free.
-      This is almost always a challenge, so I decided to make it a little easier
-      on us by building Gluscription.
-  .col-md-3
-
-
-.row
-  .col-md-3
-  .col-md-6
-    %h1.text-center How we determine if a drug is gluten-free
-    %br
-    %p
-      When you enter text in the search box and click "Search", Gluscription takes
-      that text and searches a database for a matching drug (via the openFDA API).
-      When it finds a drug, it checks if that database has a list of both active
-      and inactive ingredients for that drug. If it does, it takes that list of
-      ingredients and matches it against a list of ingredients that contain gluten,
-      and a list of ingredients that may contain gluten.
-
-      The lists that we use are the following:
-      %br
+.well.about-well
+  .row
+    .col-md-3
+    .col-md-6
+      %h1.text-center Who we are
       %br
       %p
-        Ingredients containing gluten:
-        %ul
-          %li wheat
-          %li barley
-          %li rye
-          %li wheatberries
-          %li durum
-          %li emmer
-          %li semolina
-          %li spelt
-          %li dinkel
-          %li farina
-          %li farro
-          %li faro
-          %li graham
-          %li khorasan
-          %li einkorn
-          %li triticale
-          %li brewer's yeast
-          %li wheat starch
-          %li bulgur
-          %li kamut
-          %li matzo
-          %li seitan
-          %li atta
-          %li fu
-          %li couscous
+        This website is built by a
+        = link_to "student", "https://toriejw.herokuapp.com"
+        at the
+        = link_to "Turing School of Software & Design.", "https://www.turing.io/"
+        I'm Torie, and this is my personal project for the 3rd module at Turing. My
+        grandmother and I both have celiacs, and want to make sure that our medications are gluten-free.
+        This is almost always a challenge, so I decided to make it a little easier
+        on us by building Gluscription.
+    .col-md-3
 
-      %br
+
+  .row
+    .col-md-3
+    .col-md-6
+      %h1.text-center How we determine if a drug is gluten-free
       %br
       %p
-        Ingredients that may contain gluten:
-        %ul
-          %li oats
-          %li oat flour
-          %li grain flour
-          %li starch
-          %li dextrin
-          %li dextrate
-          %li dextri-maltose
-          %li maltodextrin
-          %li starch
-          %li sodium starch glycolate
+        When you enter text in the search box and click "Search", Gluscription takes
+        that text and searches a database for a matching drug (via the openFDA API).
+        When it finds a drug, it checks if that database has a list of both active
+        and inactive ingredients for that drug. If it does, it takes that list of
+        ingredients and matches it against a list of ingredients that contain gluten,
+        and a list of ingredients that may contain gluten.
 
-      %br
+        The lists that we use are the following:
+        %br
+        %br
+        %p
+          Ingredients containing gluten:
+          %ul
+            %li wheat
+            %li barley
+            %li rye
+            %li wheatberries
+            %li durum
+            %li emmer
+            %li semolina
+            %li spelt
+            %li dinkel
+            %li farina
+            %li farro
+            %li faro
+            %li graham
+            %li khorasan
+            %li einkorn
+            %li triticale
+            %li brewer's yeast
+            %li wheat starch
+            %li bulgur
+            %li kamut
+            %li matzo
+            %li seitan
+            %li atta
+            %li fu
+            %li couscous
 
-  .col-md-3
+        %br
+        %br
+        %p
+          Ingredients that may contain gluten:
+          %ul
+            %li oats
+            %li oat flour
+            %li grain flour
+            %li starch
+            %li dextrin
+            %li dextrate
+            %li dextri-maltose
+            %li maltodextrin
+            %li starch
+            %li sodium starch glycolate
+
+        %br
+
+    .col-md-3
