@@ -18,6 +18,7 @@ gem 'hurley'
 
 gem 'skylight'
 gem 'rails_12factor'
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug'
