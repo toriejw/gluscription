@@ -17,11 +17,7 @@ class UserCanSearchForADrugTest < ActionDispatch::IntegrationTest
       assert_equal result_path, current_path
 
       assert page.has_content?("ACETAMINOPHEN 500 MG ORAL CAPSULE [MAPAP] may or may not be gluten-free.")
-      # assert page.has_content?("Inactive ingredients:")
-      # assert page.has_content?("FD&C Blue #1, FD&C Red #40, Gelatin, Polyvinylpyrrolidone, Pregelatinized Starch, Sodium Starch Glycolate, Stearic Acid, Titanium Dioxide")
-      # assert page.has_content?("Active ingredients:")
-      # assert page.has_content?("Acetaminophen")
-      # assert page.has_content?("Ingredients with gluten:")
+      assert page.has_content?("Ingredients that may contain gluten:")
       # assert page.has_content?("None! :)")
     end
   end
