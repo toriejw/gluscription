@@ -66,15 +66,14 @@ class Drug
     def gluten_containing_ingredients
       ["wheat", "barley", "rye", "wheatberries", "durum", "emmer", "semolina",
         "spelt", "dinkel", "farina", "farro", "faro", "graham", "khorasan",
-        "einkorn", "triticale", "malt", "brewer's yeast", "wheat starch",
+        "einkorn", "triticale", "malt", "brewer's yeast", "brewer's", "wheat starch",
         "bulgur", "kamut", "matzo", "seitan", "atta", "fu", "couscous"]
     end
 
     def possible_gluten_containing_ingredients
-      ["oats", "oat flour", "flour", "grain flour", "starch", "dextrin",
-       "dextrate", "dextri-maltose", "maltodextrin", "starch", "modified start",
-       "pregelatinized starch", "pre-gelatinized starch", "sodium starch glycolate",
-       "dusting powder",]
+      ["oats", "oat flour", "flour", "grain flour", "grain", "starch", "dextrin",
+       "dextrate", "dextri-maltose", "maltodextrin", "starch",
+       "pregelatinized starch", "pre-gelatinized starch", "sodium starch glycolate"]
     end
 
     def raw_inactive_ingredients

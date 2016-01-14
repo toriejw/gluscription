@@ -421,8 +421,16 @@
       "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/helpers/users_helper.rb": [
         1,
         null
+      ],
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/controllers/about_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1452747227
+    "timestamp": 1452748866
   }
 }
