@@ -16,6 +16,8 @@ gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'hurley'
 
+gem 'skylight'
+
 group :development, :test do
   gem 'byebug'
   gem 'pry'
