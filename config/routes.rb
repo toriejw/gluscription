@@ -5,5 +5,4 @@ Rails.application.routes.draw do
   get "/profile", to: "users#show"
 
   get "/about", to: "about#show"
-  get "/about/our-calculations", to: "about#show_calculations"
 end

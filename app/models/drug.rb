@@ -51,7 +51,7 @@ class Drug
   end
 
   def full_ingredient_list
-    inactive_ingredients + active_ingredients
+    inactive_ingredients + " " + active_ingredients
   end
 
   def has_ingredients?
@@ -64,16 +64,17 @@ class Drug
   private
 
     def gluten_containing_ingredients
-      ["wheat", "barley", "rye", "wheatberries", "durum", "emmer", "semolina",
-        "spelt", "dinkel", "farina", "farro", "faro", "graham", "khorasan",
-        "einkorn", "triticale", "malt", "brewer's yeast", "brewer's", "wheat starch",
-        "bulgur", "kamut", "matzo", "seitan", "atta", "fu", "couscous"]
+      # spaces around words are to make sure we match the word itself and not part of a word
+      [" wheat ", " barley ", " rye ", " wheatberries ", " durum ", " emmer ", " semolina ",
+        " spelt ", " dinkel ", " farina ", " farro ", " faro ", " graham ", " khorasan ",
+        " einkorn ", " triticale ", " malt ", "brewer's yeast ", "wheat starch ",
+        " bulgur ", " kamut ", " matzo ", " seitan ", " atta ", " fu ", " couscous "]
     end
 
     def possible_gluten_containing_ingredients
-      ["oats", "oat flour", "flour", "grain flour", "grain", "starch", "dextrin",
-       "dextrate", "dextri-maltose", "maltodextrin", "starch",
-       "pregelatinized starch", "pre-gelatinized starch", "sodium starch glycolate"]
+      [" oats ", " oat flour ", " grain flour ", " grain ", " starch ", " dextrin ",
+       " dextrate ", " dextri-maltose ", " maltodextrin ", " starch ",
+       " pregelatinized starch ", " pre-gelatinized starch ", " sodium starch glycolate "]
     end
 
     def raw_inactive_ingredients
@@ -85,22 +86,11 @@ class Drug
     end
 
     def inactive_ingredients
-      # because ingredients are returned from api in multiple forms, I'm taking
-      # all words and treating them as 'ingredients' by splitting on spaces instead
-      # of commas
-      split_words = raw_inactive_ingredients.split(" ")
-      format_words(split_words)
+      raw_inactive_ingredients.downcase
     end
 
     def active_ingredients
-      split_words = raw_active_ingredients.split(" ")
-      format_words(split_words)
-    end
-
-    def format_words(array)
-      array.map do |word|
-        word.gsub(",", "").downcase
-      end
+      raw_active_ingredients.downcase
     end
 
     def missing_rxcui
