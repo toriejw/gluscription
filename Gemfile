@@ -17,6 +17,7 @@ gem 'autoprefixer-rails'
 gem 'hurley'
 
 gem 'skylight'
+gem 'rails_12factor'
 
 group :development, :test do
   gem 'byebug'
