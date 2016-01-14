@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.fda.gov/drug/label.json?search=inactive_ingredient:b
+    uri: https://api.fda.gov/drug/label.json?search=inactive_ingredient:%22b%22
     body:
       encoding: US-ASCII
       string: ''
@@ -31,7 +31,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 13 Jan 2016 03:57:56 GMT
+      - Thu, 14 Jan 2016 21:05:47 GMT
       Etag:
       - W/"129e-veMeyqceFMnNfiTXRPQGBQ"
       Server:
@@ -50,8 +50,8 @@ http_interactions:
       - deny
       X-Xss-Protection:
       - 1; mode=block
-      Content-Length:
-      - '1917'
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
     body:
@@ -149,7 +149,7 @@ http_interactions:
           ]
         }
     http_version: 
-  recorded_at: Wed, 13 Jan 2016 03:57:56 GMT
+  recorded_at: Thu, 14 Jan 2016 21:05:47 GMT
 - request:
     method: get
     uri: https://rxnav.nlm.nih.gov/REST/rxcui/701961/status.json
@@ -169,7 +169,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 13 Jan 2016 03:57:56 GMT
+      - Thu, 14 Jan 2016 21:05:47 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Type:
@@ -183,5 +183,5 @@ http_interactions:
       string: '{"rxcuiStatus":{"status":"Active","remappedDate":"","minConceptGroup":{"minConcept":[{"rxcui":"701961","name":"Camphor
         62 MG/ML Inhalant Solution","tty":"SCD"}]}}}'
     http_version: 
-  recorded_at: Wed, 13 Jan 2016 03:57:56 GMT
+  recorded_at: Thu, 14 Jan 2016 21:05:47 GMT
 recorded_with: VCR 3.0.0

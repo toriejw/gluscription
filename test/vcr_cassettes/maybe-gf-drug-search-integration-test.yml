@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.fda.gov/drug/label.json?search=inactive_ingredient:tylenol
+    uri: https://api.fda.gov/drug/label.json?search=inactive_ingredient:%22tylenol%22
     body:
       encoding: US-ASCII
       string: ''
@@ -31,7 +31,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 12 Jan 2016 21:54:38 GMT
+      - Thu, 14 Jan 2016 21:17:50 GMT
       Etag:
       - W/"1be6-HLPqFHJ9CpZfPryoxdQihg"
       Server:
@@ -41,7 +41,7 @@ http_interactions:
       - Accept-Encoding
       - Accept-Encoding
       Via:
-      - http/1.1 api-umbrella (ApacheTrafficServer [cSsSfU])
+      - http/1.1 api-umbrella (ApacheTrafficServer [cMsSfW])
       X-Cache:
       - MISS
       X-Content-Type-Options:
@@ -217,7 +217,7 @@ http_interactions:
         ZCBjb3VsZCBjYXVzZSBsaXZlciBkYW1hZ2UuPC90ZD4gPC90cj4gPC90Ym9k
         eT4gPC90YWJsZT4iCiAgICAgIF0KICAgIH0KICBdCn0=
     http_version: 
-  recorded_at: Tue, 12 Jan 2016 21:54:38 GMT
+  recorded_at: Thu, 14 Jan 2016 21:17:50 GMT
 - request:
     method: get
     uri: https://rxnav.nlm.nih.gov/REST/rxcui/209890/status.json
@@ -237,7 +237,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 12 Jan 2016 21:54:37 GMT
+      - Thu, 14 Jan 2016 21:17:50 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Type:
@@ -251,5 +251,5 @@ http_interactions:
       string: '{"rxcuiStatus":{"status":"Active","remappedDate":"","minConceptGroup":{"minConcept":[{"rxcui":"209890","name":"Acetaminophen
         500 MG Oral Capsule [Mapap]","tty":"SBD"}]}}}'
     http_version: 
-  recorded_at: Tue, 12 Jan 2016 21:54:39 GMT
+  recorded_at: Thu, 14 Jan 2016 21:17:50 GMT
 recorded_with: VCR 3.0.0

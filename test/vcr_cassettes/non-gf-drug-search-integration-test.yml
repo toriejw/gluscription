@@ -1,0 +1,194 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.fda.gov/drug/label.json?search=inactive_ingredient:%22rye%22
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Hurley v0.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - X-Requested-With
+      Access-Control-Allow-Origin:
+      - "*"
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=60
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 14 Jan 2016 21:17:49 GMT
+      Etag:
+      - W/"118e-AalloG1o6KZSDzF7vwbD9Q"
+      Server:
+      - openresty
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      - Accept-Encoding
+      Via:
+      - http/1.1 api-umbrella (ApacheTrafficServer [cSsSfU])
+      X-Cache:
+      - MISS
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "meta": {
+            "disclaimer": "openFDA is a beta research project and not for clinical use. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated.",
+            "license": "http://open.fda.gov/license",
+            "last_updated": "2016-01-07",
+            "results": {
+              "skip": 0,
+              "limit": 1,
+              "total": 21
+            }
+          },
+          "results": [
+            {
+              "effective_time": "20130721",
+              "inactive_ingredient": [
+                "INACTIVE INGREDIENT INACTIVE INGREDIENT: GLYCINE SOJA (SOYBEAN) PHYTOPLACENTA EXTRACT, CYCLOMETHICONE, CYCLOPENTASILOXANE, BIS-PEG/PPG-14/14 DIMETHICONE, DIMETHICONE/VINYL DIMETHICONE CROSSPOLYMER, NIACINAMIDE, 1,2-HEXANEDIOL, WATER, ARCTIUM LAPPA ROOT EXTRACT, PHELLINUS LINTEUS EXTRACT, MAGNESIUM SULFATE, PIPER METHYSTICUM LEAF/ROOT/STEM EXTRACT, PORTULACA , OLERACEA EXTRACT, PUERARIA THUNBERGIANA ROOT EXTRACT, CNIDIUM OFFICINALE ROOT EXTRACT, GLYCYRRHIZA GLABRA (LICORICE) ROOT EXTRACT, PAEONIA LACTIFLORA ROOT EXTRACT, SOLUBLE COLLAGEN, PHENOXYETHANOL, HYDROLYZED RYE PHYTOPLACENTA EXTRACT, PANAX GINSENG CALLUS CULTURE EXTRACT, FRAGRANCE, ALOE BARBADENSIS LEAF JUICE, ADENOSINE, BUTYLENE GLYCOL, GOLD, HYDROGENATED LECITHIN, SODIUM HYALURONATE, XANTHAN GUM, CAPRYLYL GLYCOL, ETHYLHEXYLGLYCERIN, PHOSPHOLIPIDS, CERAMIDE 3, HELIANTHUS ANNUUS (SUNFLOWER) SEED OIL, PHYTOSPHINGOSINE, PHYTOSTEROLS, TROPOLONE, ARGININE, GLUTAMINE, HISTIDINE, ISOLEUCINE, LEUCINE, METHIONINE, THREONINE, VALINE, COLLOIDAL PLATINUM, COPPER GLUCONATE, GINSENOSIDES, MAGNESIUM ASPARTATE, ZINC GLUCONATE"
+              ],
+              "keep_out_of_reach_of_children": [
+                "KEEP OUT OF REACH OF CHILDREN Keep out of reach of children: Keep out of reach of babies and children"
+              ],
+              "purpose": [
+                "PURPOSE PURPOSE: Skin Protectant"
+              ],
+              "warnings": [
+                "WARNINGS Warnings: 1. In case of having following symptoms after using this, you're advised to stop using it immediately. If you keep using it, the symptoms will get worse and need to consult a dermatologist. 1) In case of having problems such as red rash, swollenness, itching, stimulation during usage. 2) In case of having the same symptoms above on the part you put this product on by direct sunlight. 2. You are banned to use it on the part where you have a scar, eczema, or dermatitis. 3. In case of getting it into your eyes, you have to wash it immediately."
+              ],
+              "spl_product_data_elements": [
+                "Timeless Placenta Bound GLYCERIN, DIMETHICONE GLYCERIN GLYCERIN DIMETHICONE DIMETHICONE WATER MAGNESIUM SULFATE"
+              ],
+              "openfda": {
+                "product_ndc": [
+                  "59078-024"
+                ],
+                "nui": [
+                  "N0000010282"
+                ],
+                "is_original_packager": [
+                  true
+                ],
+                "package_ndc": [
+                  "59078-024-01"
+                ],
+                "generic_name": [
+                  "GLYCERIN, DIMETHICONE"
+                ],
+                "spl_set_id": [
+                  "002a8eea-7665-45de-969c-e888ddfc7005"
+                ],
+                "brand_name": [
+                  "Timeless Placenta Bound"
+                ],
+                "manufacturer_name": [
+                  "TONYMOLY CO., LTD."
+                ],
+                "pharm_class_pe": [
+                  "Skin Barrier Activity [PE]"
+                ],
+                "rxcui": [
+                  "1483335"
+                ],
+                "unii": [
+                  "92RU3N3Y1O"
+                ],
+                "spl_id": [
+                  "fa4c0881-feb4-4d2a-827e-838e70a2cfc9"
+                ],
+                "substance_name": [
+                  "GLYCERIN",
+                  "DIMETHICONE"
+                ],
+                "product_type": [
+                  "HUMAN OTC DRUG"
+                ],
+                "route": [
+                  "TOPICAL"
+                ],
+                "application_number": [
+                  "part347"
+                ]
+              },
+              "version": "1",
+              "dosage_and_administration": [
+                "DOSAGE AND ADMINISTRATION DOSAGE AND ADMINISTRATION: Take an adequate amount of this product."
+              ],
+              "package_label_principal_display_panel": [
+                "PACKAGE LABEL.PRINCIPAL DISPLAY PANEL Image of carton"
+              ],
+              "indications_and_usage": [
+                "INDICATIONS AND USAGE INDICATIONS AND USAGE: Take an adequate amount to spread on face and massage with lifting bound vibrator for 2-3 minutes. When used with 3D lifting bound vibrator, it vibrates 9,000 times per minute which helps relieving and relaxing facial muscles."
+              ],
+              "set_id": "002a8eea-7665-45de-969c-e888ddfc7005",
+              "id": "fa4c0881-feb4-4d2a-827e-838e70a2cfc9",
+              "active_ingredient": [
+                "ACTIVE INGREDIENT ACTIVE INGREDIENT: GLYCERIN 30%, DIMETHICONE 3.00%"
+              ]
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Thu, 14 Jan 2016 21:17:49 GMT
+- request:
+    method: get
+    uri: https://rxnav.nlm.nih.gov/REST/rxcui/1483335/status.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Hurley v0.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 14 Jan 2016 21:17:49 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Access-Control-Allow-Origin:
+      - "*"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"rxcuiStatus":{"status":"Active","remappedDate":"","minConceptGroup":{"minConcept":[{"rxcui":"1483335","name":"dimethicone
+        30 MG/ML / Glycerin 300 MG/ML Topical Cream","tty":"SCD"}]}}}'
+    http_version: 
+  recorded_at: Thu, 14 Jan 2016 21:17:50 GMT
+recorded_with: VCR 3.0.0

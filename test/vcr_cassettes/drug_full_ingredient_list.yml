@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.fda.gov/drug/label.json?search=inactive_ingredient:c
+    uri: https://api.fda.gov/drug/label.json?search=inactive_ingredient:%22c%22
     body:
       encoding: US-ASCII
       string: ''
@@ -31,7 +31,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 13 Jan 2016 18:21:20 GMT
+      - Thu, 14 Jan 2016 21:05:47 GMT
       Etag:
       - W/"28ab-Vbzu6EkLPmkK/zEI8/RPBg"
       Server:
@@ -290,7 +290,7 @@ http_interactions:
         dWNvbmF0ZSAyJSB3L3YgSXNvcHJvcHlsIGFsY29ob2wgNzAlIHYvdiIKICAg
         ICAgXQogICAgfQogIF0KfQ==
     http_version: 
-  recorded_at: Wed, 13 Jan 2016 18:21:20 GMT
+  recorded_at: Thu, 14 Jan 2016 21:05:47 GMT
 - request:
     method: get
     uri: https://rxnav.nlm.nih.gov/REST/rxcui/998282/status.json
@@ -310,7 +310,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 13 Jan 2016 18:21:20 GMT
+      - Thu, 14 Jan 2016 21:05:47 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Type:
@@ -325,5 +325,5 @@ http_interactions:
         gluconate 20 MG/ML / Isopropyl Alcohol 0.7 ML/ML Topical Solution [ChloraPrep
         One-Step]","tty":"SBD"}]}}}'
     http_version: 
-  recorded_at: Wed, 13 Jan 2016 18:21:21 GMT
+  recorded_at: Thu, 14 Jan 2016 21:05:48 GMT
 recorded_with: VCR 3.0.0

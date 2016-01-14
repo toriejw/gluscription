@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.fda.gov/drug/label.json?search=inactive_ingredient:t
+    uri: https://api.fda.gov/drug/label.json?search=inactive_ingredient:%22t%22
     body:
       encoding: US-ASCII
       string: ''
@@ -31,7 +31,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 13 Jan 2016 22:41:38 GMT
+      - Thu, 14 Jan 2016 21:05:44 GMT
       Etag:
       - W/"15e2-B6Apn1/v849CA9bWCMH/fg"
       Server:
@@ -183,5 +183,5 @@ http_interactions:
         bGF0ZSAoNSUpLCBPY3RvY3J5bGVuZSAoMS43JSksIE94eWJlbnpvbmUgKDMl
         KSIKICAgICAgXQogICAgfQogIF0KfQ==
     http_version: 
-  recorded_at: Wed, 13 Jan 2016 22:41:38 GMT
+  recorded_at: Thu, 14 Jan 2016 21:05:44 GMT
 recorded_with: VCR 3.0.0
