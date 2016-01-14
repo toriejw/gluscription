@@ -14,7 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
-gem 'hurley'
+gem 'faraday'
 
 gem 'skylight'
 gem 'rails_12factor'
