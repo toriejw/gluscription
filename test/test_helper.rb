@@ -20,4 +20,15 @@ end
 
 class ActionDispatch::IntegrationTest
   include Capybara::DSL
+
+  def stub_omniauth
+    OmniAuth.config.test_mode = true
+    OmniAuth.config.mock_auth[:facebook] = OmniAuth::AuthHash.new({
+        provider: "facebook",
+        uid: "1234",
+        info: { first_name: "some_name" },
+        credentials: { token: "candy_treats",
+                       expires_at: 1010101,
+                       expires: "true" } })
+  end
 end
