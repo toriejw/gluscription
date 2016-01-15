@@ -1,3 +1,5 @@
+$well-font-color: black;
+
 .users-page-header {
   color: $font-color;
   font-size: $header-font-size;
@@ -9,13 +11,18 @@ th {
 
 h2 {
   font-size: 110%;
-  color: black;
+  color: $well-font-color;
 }
 
 .past-search-data {
-  color: black;
+  color: $well-font-color;
 }
 
 hr {
-  border-color: black;
+  border-color: $well-font-color;
+}
+
+.user-show-page-well {
+  color: $well-font-color;
+  text-align: center;
 }

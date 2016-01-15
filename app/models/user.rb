@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :search_results
 
   def self.from_omniauth(user_data)
     user      = find_or_create_by(third_party_id: user_data["uid"])

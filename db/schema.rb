@@ -11,17 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160115231417) do
+ActiveRecord::Schema.define(version: 20160115233553) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "search_results", force: :cascade do |t|
     t.string   "medication"
-    t.boolean  "gluten_free"
+    t.string   "gluten_free"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "user_id"
   end
+
+  add_index "search_results", ["user_id"], name: "index_search_results_on_user_id", using: :btree
 
   create_table "suspect_ingredients", force: :cascade do |t|
     t.string   "name"
@@ -36,4 +39,5 @@ ActiveRecord::Schema.define(version: 20160115231417) do
     t.string   "third_party_id"
   end
 
+  add_foreign_key "search_results", "users"
 end

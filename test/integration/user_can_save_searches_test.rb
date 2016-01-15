@@ -24,7 +24,7 @@ class UserCanSaveSearchesTest < ActionDispatch::IntegrationTest
     assert page.has_content? "none"
 
     click_button "New Search"
-    fill_in "drugs", with: "tylenol"
+    fill_in "drug", with: "tylenol"
     click_button "Search"
 
     click_link "My Searches"
@@ -39,21 +39,23 @@ class UserCanSaveSearchesTest < ActionDispatch::IntegrationTest
   end
 
   test "searches for drugs that are not found are not saved" do
-    old_search_count = SearchResult.count
-    stub_omniauth
-    visit root_path
-    click_link "Log in with Facebook"
+    VCR.use_cassette("drugs-not-found-are-not-saved") do
+      old_search_count = SearchResult.count
+      stub_omniauth
+      visit root_path
+      click_link "Log in with Facebook"
 
-    click_button "New Search"
-    fill_in "drugs", with: "torie"
-    click_button "Search"
+      click_button "New Search"
+      fill_in "drug", with: "torie"
+      click_button "Search"
 
-    click_link "My Searches"
+      click_link "My Searches"
 
-    new_search_count = SearchResult.count
-
-    assert page.has_content "You don't have any saved searches yet."
-    assert_equal 0, old_search_count - new_search_count
+      new_search_count = SearchResult.count
+      save_and_open_page
+      assert page.has_content? "You don't have any saved searches yet."
+      assert_equal 0, old_search_count - new_search_count
+    end
   end
 
 end
