@@ -19,6 +19,7 @@ gem 'faraday', '0.9.2'
 gem 'skylight'
 gem 'rails_12factor'
 gem 'figaro'
+gem 'omniauth-facebook', '3.0.0'
 
 group :development, :test do
   gem 'byebug'

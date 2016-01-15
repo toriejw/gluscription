@@ -40,26 +40,11 @@ class Drug
   end
 
   def contains_ingredients_with_gluten?
-    gluten_containing_ingredients.each do |gluten_ingredient|
-      # return true if full_ingredient_list.include?(gluten_ingredient)
-      if full_ingredient_list.include?(gluten_ingredient)
-        @dangerous_ingredients << gluten_ingredient
-      end
-    end
-
-    return true if !@dangerous_ingredients.empty?
-    false
+    check_if_ingredients_include(gluten_containing_ingredients)
   end
 
   def contains_questionable_ingredients?
-    possible_gluten_containing_ingredients.each do |gluten_ingredient|
-      if full_ingredient_list.include?(gluten_ingredient)
-        @dangerous_ingredients << gluten_ingredient
-      end
-    end
-
-    return true if !@dangerous_ingredients.empty?
-    false
+    check_if_ingredients_include(possible_gluten_containing_ingredients)
   end
 
   def full_ingredient_list
@@ -107,5 +92,17 @@ class Drug
 
     def missing_rxcui
       !@drug_data["results"][0]["openfda"]["rxcui"]
+    end
+
+    def check_if_ingredients_include(list)
+      list.each do |gluten_ingredient|
+        @dangerous_ingredients << gluten_ingredient if full_ingredient_list.include?(gluten_ingredient)
+      end
+
+      dangerous_ingredients?
+    end
+
+    def dangerous_ingredients?
+      !@dangerous_ingredients.empty?
     end
 end
