@@ -3,9 +3,12 @@
     = link_to "Search Prescriptions", "/"
   %li
     = link_to "About Gluscription", "/about"
-  %li
+
+  - if current_user
+    %li
+      -# = link_to "Log Out", logout_path
+    %li
+      = link_to "My Searches", profile_path
+  - else
+    %li
     = link_to "Log in with Facebook", "/auth/facebook"
-  %li
-    = link_to "Log Out", "/"
-  %li
-    = link_to "My Searches", "/"
