@@ -9,12 +9,15 @@ p {
 
 a {
   color: $font-color;
-  font-size: $p-font-size;
 }
 
 a:hover {
   color: $link-hover-color;
   text-decoration: none;
+}
+
+.home-page-link {
+  font-size: $p-font-size;
 }
 
 .nav-pills a:hover {
