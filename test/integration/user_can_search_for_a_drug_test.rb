@@ -17,8 +17,7 @@ class UserCanSearchForADrugTest < ActionDispatch::IntegrationTest
       assert_equal result_path, current_path
 
       assert page.has_content?("ACETAMINOPHEN 500 MG ORAL CAPSULE [MAPAP] may or may not be gluten-free.")
-      # assert page.has_content?("Ingredients that may contain gluten:")
-      # assert page.has_content?("None! :)")
+      assert page.has_content?("Ingredients of concern: starch")
     end
   end
 
@@ -32,6 +31,7 @@ class UserCanSearchForADrugTest < ActionDispatch::IntegrationTest
       assert_equal result_path, current_path
 
       assert page.has_content?("is gluten-free!")
+      assert page.has_content?("Ingredients of concern: none")
     end
   end
 
@@ -43,8 +43,9 @@ class UserCanSearchForADrugTest < ActionDispatch::IntegrationTest
       click_button "Search"
 
       assert_equal result_path, current_path
-
+      
       assert page.has_content?("is NOT gluten-free :( !")
+      assert page.has_content?("Ingredients of concern: rye")
     end
   end
 

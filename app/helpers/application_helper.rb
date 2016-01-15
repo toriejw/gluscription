@@ -19,7 +19,16 @@ module ApplicationHelper
     if drug.name == "not found" || !drug.has_ingredients?
       button_to "Try another search", root_path, method: :get, class: "btn btn-info"
     else
-      content_tag :p, "This is based on the following information from the FDA:"
+      list_of_concerning_ingredients(drug)
     end
+  end
+
+  def list_of_concerning_ingredients(drug)
+    if drug.dangerous_ingredients.empty?
+      ingredients_list = "none"
+    else
+      ingredients_list = drug.dangerous_ingredients.uniq.join(", ")
+    end
+    content_tag :p, "Ingredients of concern: #{ingredients_list}"
   end
 end

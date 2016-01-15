@@ -2,10 +2,12 @@ require_relative "../services/rx_norm_service.rb"
 
 class Drug
   attr_reader :name, :drug_data
+  attr_accessor :dangerous_ingredients
 
   def initialize(search_terms)
-    @drug_data = get_drug_data(search_terms)
-    @name      = get_drug_name
+    @drug_data             = get_drug_data(search_terms)
+    @name                  = get_drug_name
+    @dangerous_ingredients = ["unknown"] # this is set as unknown instead of "" to make sure a blank list is never confused with a drug being GF
   end
 
   def rxcui
@@ -25,6 +27,7 @@ class Drug
   end
 
   def gluten_free?
+    @dangerous_ingredients = []
     if !has_ingredients?
       :ingredients_not_listed
     elsif contains_ingredients_with_gluten?
@@ -38,15 +41,24 @@ class Drug
 
   def contains_ingredients_with_gluten?
     gluten_containing_ingredients.each do |gluten_ingredient|
-      return true if full_ingredient_list.include?(gluten_ingredient)
+      # return true if full_ingredient_list.include?(gluten_ingredient)
+      if full_ingredient_list.include?(gluten_ingredient)
+        @dangerous_ingredients << gluten_ingredient
+      end
     end
+
+    return true if !@dangerous_ingredients.empty?
     false
   end
 
   def contains_questionable_ingredients?
     possible_gluten_containing_ingredients.each do |gluten_ingredient|
-      return true if full_ingredient_list.include?(gluten_ingredient)
+      if full_ingredient_list.include?(gluten_ingredient)
+        @dangerous_ingredients << gluten_ingredient
+      end
     end
+
+    return true if !@dangerous_ingredients.empty?
     false
   end
 
