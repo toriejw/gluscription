@@ -2,7 +2,7 @@
   "MiniTest": {
     "coverage": {
       "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/services/rx_norm_service.rb": [
-        1,
+        null,
         null,
         1,
         null,
@@ -10,10 +10,6 @@
         10,
         10,
         null,
-        10,
-        null,
-        null,
-        1,
         10,
         null,
         null,
@@ -25,82 +21,8 @@
         10,
         null,
         null,
-        null
-      ],
-      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/services/open_fda_service.rb": [
         1,
-        null,
-        1,
-        null,
-        1,
-        12,
-        12,
-        null,
-        null,
-        null
-      ],
-      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/controllers/search_controller.rb": [
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        null
-      ],
-      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/helpers/application_helper.rb": [
-        1,
-        1,
-        5,
-        null,
-        3,
-        null,
-        3,
-        0,
-        3,
-        1,
-        2,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        1,
-        5,
-        2,
-        null,
-        3,
-        null,
-        null,
-        null
-      ],
-      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/helpers/about_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/helpers/drug_helper.rb": [
-        1,
-        null,
-        null
-      ],
-      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/helpers/results_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/helpers/users_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/controllers/drugs_controller.rb": [
-        1,
-        null,
-        1,
-        5,
+        10,
         null,
         null,
         null
@@ -206,6 +128,75 @@
         null,
         null
       ],
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/services/open_fda_service.rb": [
+        null,
+        null,
+        1,
+        null,
+        1,
+        12,
+        12,
+        null,
+        null,
+        null
+      ],
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/controllers/search_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/helpers/application_helper.rb": [
+        1,
+        1,
+        5,
+        null,
+        3,
+        null,
+        3,
+        0,
+        3,
+        1,
+        2,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        5,
+        2,
+        null,
+        3,
+        null,
+        null,
+        null
+      ],
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/helpers/about_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/helpers/drug_helper.rb": [
+        1,
+        null,
+        null
+      ],
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/helpers/results_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
       "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/controllers/about_controller.rb": [
         1,
         null,
@@ -213,9 +204,18 @@
         null,
         null,
         null
+      ],
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/controllers/drugs_controller.rb": [
+        1,
+        null,
+        1,
+        5,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1452806271
+    "timestamp": 1452822648
   },
   "Unit Tests": {
     "coverage": {
