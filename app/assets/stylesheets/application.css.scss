@@ -11,13 +11,17 @@ $p-font-size: 150%;
 $disclaimer-font-size: 50%;
 
 body {
-  // background-color: $background-color;
   background-image: image-url("prescription");
   background-size: 100%;
 }
 
 * {
   font-color: $font-color;
+}
+
+.flash_notice {
+  text-align: center;
+  color: $font-color;
 }
 
 @import "search.scss";

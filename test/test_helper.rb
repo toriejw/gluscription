@@ -31,4 +31,8 @@ class ActionDispatch::IntegrationTest
                        expires_at: 1010101,
                        expires: "true" } })
   end
+
+  def teardown
+    reset_session!
+  end
 end

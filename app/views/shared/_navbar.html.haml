@@ -6,9 +6,9 @@
 
   - if current_user
     %li
-      -# = link_to "Log Out", logout_path
+      = link_to "Log Out", logout_path
     %li
       = link_to "My Searches", profile_path
   - else
     %li
-    = link_to "Log in with Facebook", "/auth/facebook"
+      = link_to "Log in with Facebook", "/auth/facebook"

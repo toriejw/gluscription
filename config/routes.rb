@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
+  
   root to: "search#new"
 
-  get "/result", to: "drugs#show"
+  get "/result",  to: "drugs#show"
   get "/profile", to: "users#show"
+  get "/about",   to: "about#show"
 
-  get "/about", to: "about#show"
-
-  get "/login", to: "sessions#new"
+  get "/login",                  to: "sessions#new"
+  get "/logout",                 to: "sessions#destroy"
   get "auth/:provider/callback", to: "sessions#create"
+
 end
