@@ -8,6 +8,7 @@ $well-background-color: #364563;
 
 $header-font-size: 210%;
 $p-font-size: 160%;
+$nav-font-size: 100%;
 $disclaimer-font-size: 70%;
 
 body {
@@ -17,6 +18,10 @@ body {
 
 * {
   font-color: $font-color;
+}
+
+.nav li {
+  font-size: $nav-font-size;
 }
 
 .flash_notice {
