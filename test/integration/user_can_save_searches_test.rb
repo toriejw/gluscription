@@ -3,7 +3,7 @@ require "test_helper"
 class UserCanSaveSearchesTest < ActionDispatch::IntegrationTest
 
   test "user can save searches and view them on their profile" do
-    VCR.use_cassette("user-can-save-searche") do
+    VCR.use_cassette("user-can-save-search") do
       old_search_count = SearchResult.count
       stub_omniauth
       visit root_path
@@ -18,8 +18,8 @@ class UserCanSaveSearchesTest < ActionDispatch::IntegrationTest
       assert page.has_content? "Medication"
       assert page.has_content? "Gluten-free?"
       assert page.has_content? "Suspect Ingredients"
-
-      assert page.has_content? "WARFARIN"
+      
+      assert page.has_content? "LANSOPRAZOLE 15 MG DELAYED RELEASE ORAL CAPSULE"
       assert page.has_content? "Yes"
       assert page.has_content? "none"
 

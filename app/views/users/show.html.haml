@@ -27,7 +27,8 @@
         .col-md-1
 
       - if !@search_results.empty?
-        = render @search_results
+        - @search_results.each do |search_result|
+          = render search_result
       - else
         = content_tag :p, "You don't have any saved searches yet.", class: "user-show-page-well"
 

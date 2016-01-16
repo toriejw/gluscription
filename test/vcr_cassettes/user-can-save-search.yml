@@ -31,7 +31,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 15 Jan 2016 23:46:01 GMT
+      - Sat, 16 Jan 2016 03:57:19 GMT
       Etag:
       - W/"31e6-AD/B2Yh65IDzGv9BJYLo6g"
       Server:
@@ -41,7 +41,7 @@ http_interactions:
       - Accept-Encoding
       - Accept-Encoding
       Via:
-      - http/1.1 api-umbrella (ApacheTrafficServer [cMsSfW])
+      - http/1.1 api-umbrella (ApacheTrafficServer [cSsSfU])
       X-Cache:
       - MISS
       X-Content-Type-Options:
@@ -50,8 +50,8 @@ http_interactions:
       - deny
       X-Xss-Protection:
       - 1; mode=block
-      Content-Length:
-      - '3610'
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
     body:
@@ -342,7 +342,7 @@ http_interactions:
         ICAgICAgICAiQWN0aXZlIGluZ3JlZGllbnQgKGluIGVhY2ggY2Fwc3VsZSkg
         TGFuc29wcmF6b2xlIDE1IG1nIgogICAgICBdCiAgICB9CiAgXQp9
     http_version: 
-  recorded_at: Fri, 15 Jan 2016 23:46:01 GMT
+  recorded_at: Sat, 16 Jan 2016 03:57:20 GMT
 - request:
     method: get
     uri: https://rxnav.nlm.nih.gov/REST/rxcui/596843/status.json
@@ -362,7 +362,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 15 Jan 2016 23:46:01 GMT
+      - Sat, 16 Jan 2016 03:57:19 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Type:
@@ -376,5 +376,5 @@ http_interactions:
       string: '{"rxcuiStatus":{"status":"Active","remappedDate":"","minConceptGroup":{"minConcept":[{"rxcui":"596843","name":"lansoprazole
         15 MG Delayed Release Oral Capsule","tty":"SCD"}]}}}'
     http_version: 
-  recorded_at: Fri, 15 Jan 2016 23:46:02 GMT
+  recorded_at: Sat, 16 Jan 2016 03:57:20 GMT
 recorded_with: VCR 3.0.0
