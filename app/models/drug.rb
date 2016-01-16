@@ -31,11 +31,11 @@ class Drug
     if !has_ingredients?
       :ingredients_not_listed
     elsif contains_ingredients_with_gluten?
-      :false
+      :no
     elsif contains_questionable_ingredients?
       :maybe
     else
-      :true
+      :yes
     end
   end
 

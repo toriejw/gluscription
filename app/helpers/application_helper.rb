@@ -6,7 +6,7 @@ module ApplicationHelper
 
     if gluten_free_status == :ingredients_not_listed
       "Sorry, the FDA has not provided ingredients for this drug :("
-    elsif gluten_free_status == :true
+    elsif gluten_free_status == :yes
       "is gluten-free!"
     elsif gluten_free_status == :maybe
       "may or may not be gluten-free."

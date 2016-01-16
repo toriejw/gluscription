@@ -35,9 +35,9 @@ class DrugTest < ActiveSupport::TestCase
       tylenol          = Drug.new("tylenol")
       drug_with_gluten = Drug.new("rye")
 
-      assert_equal :true, warfarin.gluten_free?
+      assert_equal :yes, warfarin.gluten_free?
       assert_equal :maybe, tylenol.gluten_free?
-      assert_equal :false, drug_with_gluten.gluten_free?
+      assert_equal :no, drug_with_gluten.gluten_free?
     end
   end
 

@@ -8,4 +8,15 @@ class User < ActiveRecord::Base
     user
   end
 
+  def save_search(drug)
+    search_results = SearchResult.create( medication: drug.name,
+                                          gluten_free_status: drug.gluten_free?.to_s )
+
+    drug.dangerous_ingredients.each do |ingredient|
+      search_results.suspect_ingredients.create(name: ingredient)
+    end
+
+    self.search_results << search_results
+  end
+
 end

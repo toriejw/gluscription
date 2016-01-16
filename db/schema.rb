@@ -11,16 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160115233553) do
+ActiveRecord::Schema.define(version: 20160116034920) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "search_results", force: :cascade do |t|
     t.string   "medication"
-    t.string   "gluten_free"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "gluten_free_status"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.integer  "user_id"
   end
 
@@ -28,9 +28,12 @@ ActiveRecord::Schema.define(version: 20160115233553) do
 
   create_table "suspect_ingredients", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "search_result_id"
   end
+
+  add_index "suspect_ingredients", ["search_result_id"], name: "index_suspect_ingredients_on_search_result_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -40,4 +43,5 @@ ActiveRecord::Schema.define(version: 20160115233553) do
   end
 
   add_foreign_key "search_results", "users"
+  add_foreign_key "suspect_ingredients", "search_results"
 end
