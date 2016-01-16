@@ -1,8 +1,11 @@
 class UsersController < ApplicationController
 
   def show
-    redirect_to root_path if !current_user
-    @search_results = current_user.search_results
+    if current_user
+      @search_results = current_user.search_results
+    else
+      redirect_to root_path
+    end
   end
 
 end

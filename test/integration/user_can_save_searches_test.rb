@@ -18,7 +18,7 @@ class UserCanSaveSearchesTest < ActionDispatch::IntegrationTest
       assert page.has_content? "Medication"
       assert page.has_content? "Gluten-free?"
       assert page.has_content? "Suspect Ingredients"
-      
+
       assert page.has_content? "LANSOPRAZOLE 15 MG DELAYED RELEASE ORAL CAPSULE"
       assert page.has_content? "Yes"
       assert page.has_content? "none"
@@ -28,14 +28,14 @@ class UserCanSaveSearchesTest < ActionDispatch::IntegrationTest
       click_button "Search"
 
       click_link "My Searches"
-
-      assert page.has_content? "TYLENOL"
+      
+      assert page.has_content? "ACETAMINOPHEN 500 MG ORAL CAPSULE [MAPAP]"
       assert page.has_content? "Maybe"
       assert page.has_content? "starch"
 
       new_search_count = SearchResult.count
 
-      assert_equal 2, old_search_count - new_search_count
+      assert_equal 2, new_search_count - old_search_count
     end
   end
 

@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
   end
 
   def save_search(drug)
+    return unless valid_search(drug)
+
     search_results = SearchResult.create( medication: drug.name,
                                           gluten_free_status: drug.gluten_free?.to_s )
 
@@ -19,4 +21,7 @@ class User < ActiveRecord::Base
     self.search_results << search_results
   end
 
+  def valid_search(drug)
+    drug.found?
+  end
 end

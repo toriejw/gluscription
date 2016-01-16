@@ -19,8 +19,9 @@
     %br
     %br
 
-    %p.text-center.log-in-or-create-account
-      Want to save your searches?
-      %br
-      = link_to "Log in", "/"
+    - if !current_user
+      %p.text-center.log-in-or-create-account
+        Want to save your searches?
+        %br
+        = link_to "Log in", "/"
   .col-md-1

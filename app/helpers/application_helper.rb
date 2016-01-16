@@ -1,6 +1,6 @@
 module ApplicationHelper
   def gluten_free_or_not_message(drug)
-    return "Sorry, we couldn't find the drug you searched for." if drug.name == "not found"
+    return "Sorry, we couldn't find the drug you searched for." if !drug.found?
 
     gluten_free_status = drug.gluten_free?
 
@@ -16,7 +16,7 @@ module ApplicationHelper
   end
 
   def additional_info_or_search_again_button(drug)
-    if drug.name == "not found" || !drug.has_ingredients?
+    if !drug.found? || !drug.has_ingredients?
       button_to "Try another search", root_path, method: :get, class: "btn btn-info"
     else
       list_of_concerning_ingredients(drug)

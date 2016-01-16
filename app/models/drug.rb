@@ -58,6 +58,10 @@ class Drug
     raw_active_ingredients)
   end
 
+  def found?
+    self.name != "not found"
+  end
+
   private
 
     def gluten_containing_ingredients
