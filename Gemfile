@@ -21,6 +21,8 @@ gem 'rails_12factor'
 gem 'figaro'
 gem 'omniauth-facebook', '3.0.0'
 
+gem 'responders'
+
 group :development, :test do
   gem 'byebug'
   gem 'pry'

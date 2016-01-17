@@ -32,18 +32,6 @@
         1,
         null
       ],
-      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/services/open_fda_service.rb": [
-        null,
-        null,
-        1,
-        null,
-        1,
-        16,
-        16,
-        null,
-        null,
-        null
-      ],
       "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/controllers/search_controller.rb": [
         1,
         1,
@@ -244,17 +232,14 @@
         null,
         null
       ],
-      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/models/search_result.rb": [
-        1,
-        1,
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/services/open_fda_service.rb": [
+        null,
+        null,
         1,
         null,
         1,
-        4,
-        2,
-        null,
-        2,
-        5,
+        16,
+        16,
         null,
         null,
         null
@@ -322,6 +307,21 @@
         null,
         null
       ],
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/models/search_result.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        4,
+        2,
+        null,
+        2,
+        5,
+        null,
+        null,
+        null
+      ],
       "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/controllers/about_controller.rb": [
         1,
         null,
@@ -331,7 +331,7 @@
         null
       ]
     },
-    "timestamp": 1452922344
+    "timestamp": 1452965710
   },
   "Unit Tests": {
     "coverage": {

@@ -6,6 +6,8 @@
 %br
 %br
 
+%div#not-found-notice
+
 .row
   .col-md-2
   .col-md-8.text-center
@@ -19,7 +21,7 @@
   .col-md-3
   .col-md-6.text-center
     %br
-    = form_tag result_path, method: :get do
+    = form_tag search_results_path, remote: true, html: { "data-type": "html", id: "create-search-bar" } do
       .form-group
         = text_field_tag "drug", "eg. tylenol", maxlength: 50, class: "form-control"
       = submit_tag "Search", class: "btn btn-info"
@@ -27,6 +29,9 @@
 
 %br
 %br
+
+.result
+
 %br
 %br
 %br
