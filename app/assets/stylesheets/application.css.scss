@@ -29,6 +29,7 @@ body {
   color: $font-color;
 }
 
+@import "search_results.scss";
 @import "search.scss";
 @import "users.scss";
 @import "drugs.scss";

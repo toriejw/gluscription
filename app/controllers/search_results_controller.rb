@@ -14,7 +14,7 @@ class SearchResultsController < ApplicationController
       respond_with do |format|
         format.html do
           if request.xhr?
-            render partial: "search_result/show", locals: { drug: @drug }, layout: false
+            render partial: "drugs/drug", locals: { drug: @drug }, layout: false
           else
             redirect_to result_path
           end

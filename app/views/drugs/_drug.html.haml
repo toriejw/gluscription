@@ -1,0 +1,27 @@
+%br
+%br
+
+.row
+  .col-md-1
+  .col-md-10.well
+    %h1.text-center
+      = @drug.name.upcase
+      %br
+      %br
+      = gluten_free_or_not_message(@drug)
+
+    %br
+
+    .text-center
+      = additional_info_or_search_again_button(@drug)
+
+    %br
+    %br
+    %br
+
+    - if !current_user
+      %p.text-center.log-in-or-create-account
+        Want to save your searches?
+        %br
+        = link_to "Log in", "/login"
+  .col-md-1
