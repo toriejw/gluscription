@@ -24,7 +24,7 @@ class SearchResultsController < ApplicationController
       respond_with do |format|
         format.html do
           if request.xhr?
-            render json: "Sorry, we could not find the medication you searched for."
+            render json: "<p class='not-found-notice'>Sorry, we could not find the medication you searched for.</p>"
           else
             render action: :new
           end

@@ -23,14 +23,14 @@
     %br
     = form_tag search_results_path, remote: true, html: { "data-type": "html", id: "create-search-bar" }, id: "create-search-bar" do
       .form-group
-        = text_field_tag "drug", "eg. tylenol", maxlength: 50, class: "form-control"
+        = text_field_tag "drug", maxlength: 50, class: "form-control"
       = submit_tag "Search", class: "btn btn-info"
   .col-md-3
 
 %br
 %br
 
-.well#result
+.div#result
 
 %br
 %br
