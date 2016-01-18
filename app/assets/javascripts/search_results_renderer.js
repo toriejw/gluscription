@@ -2,12 +2,6 @@ $(document).ready(function(){
   $('.well').hide();
 
   $('#create-search-bar')
-    // .bind("ajax:beforeSend", function(evt, xhr, settings){
-    //   var $submitButton = $(this).find('input[name="commit"]');
-    //
-    //   $submitButton.data( 'origText', $(this).text() );
-    //   $submitButton.text( "Searching..." );
-    // })
     .bind("ajax:success", function(evt, data, status, xhr){
       var $form = $(this);
       $form.find('textfield,input[type="text"]').val("");
@@ -15,11 +9,6 @@ $(document).ready(function(){
       $('.well').show();
       $('#result').html(xhr.responseText);
     })
-    // .bind("ajax:complete", function(evt, xhr, status){
-    //   var $submitButton = $(this).find('input[name="commit"]');
-    //
-    //   $submitButton.text( $(this).data('origText') );
-    // })
     .bind("ajax:error", function(evt, xhr, status, error){
       var $form = $(this),
           errors,

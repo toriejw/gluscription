@@ -3,6 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #result {
-  font-color: black;
   text-align: center;
+}
+
+.search-result-well {
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.search-result-well h1 {
+  font-size: 150%;
 }

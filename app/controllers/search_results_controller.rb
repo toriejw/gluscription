@@ -7,7 +7,7 @@ class SearchResultsController < ApplicationController
 
   def create
     @drug = Drug.new(params[:drug])
-
+    
     if @drug.found?
       current_user.save_search(@drug) if current_user
 
