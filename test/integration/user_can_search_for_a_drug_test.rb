@@ -7,14 +7,13 @@ class UserCanSearchForADrugTest < ActionDispatch::IntegrationTest
 
       assert_equal "/", current_path
       assert page.has_content? "Type in the name of a prescription or OTC drug"
-      assert page.has_link? "Find out how we determine if a drug is gluten-free"
       assert page.has_content? "Drug information comes from the FDA, who provide it with the following disclaimer"
       assert page.has_button? "Search"
 
       fill_in "drug", with: "tylenol"
       click_button "Search"
 
-      assert_equal result_path, current_path
+      assert_equal root_path, current_path
 
       assert page.has_content?("ACETAMINOPHEN 500 MG ORAL CAPSULE [MAPAP] may or may not be gluten-free.")
       assert page.has_content?("Ingredients of concern: starch")
@@ -43,7 +42,7 @@ class UserCanSearchForADrugTest < ActionDispatch::IntegrationTest
       click_button "Search"
 
       assert_equal result_path, current_path
-      
+
       assert page.has_content?("is NOT gluten-free :( !")
       assert page.has_content?("Ingredients of concern: rye")
     end
@@ -72,12 +71,9 @@ class UserCanSearchForADrugTest < ActionDispatch::IntegrationTest
       fill_in "drug", with: "synthroid"
       click_button "Search"
 
-      assert_equal result_path, current_path
+      # assert_equal root_path, current_path
+      save_and_open_page
       assert page.has_content? "Sorry, we couldn't find the drug you searched for."
-
-      click_button "Try another search"
-
-      assert_equal root_path, current_path
     end
   end
 
@@ -88,12 +84,8 @@ class UserCanSearchForADrugTest < ActionDispatch::IntegrationTest
       fill_in "drug", with: "t"
       click_button "Search"
 
-      assert_equal result_path, current_path
-      assert page.has_content? "Sorry, we couldn't find the drug you searched for."
-
-      click_button "Try another search"
-
-      assert_equal root_path, current_path
+      # assert_equal root_path, current_path
+      assert page.has_content? "Sorry, we could not find the medication you searched for."
     end
   end
 end
