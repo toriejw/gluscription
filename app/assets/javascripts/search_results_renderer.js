@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  $('.well').hide();
 
   $('#create-search-bar')
     .bind("ajax:success", function(evt, data, status, xhr){
