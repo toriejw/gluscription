@@ -1,6 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@font-face {
+  font-family: "gravity";
+  src: asset-url("gravity/Gravity-Book.otf");
+}
+
 $font-color: #f2f2f2;
 $link-hover-color: #97979e;
 $well-background-color: #364563;
@@ -13,6 +18,7 @@ $disclaimer-font-size: 70%;
 body {
   background-image: image-url("prescription");
   background-size: 100%;
+  font-family: "gravity";
 }
 
 * {
