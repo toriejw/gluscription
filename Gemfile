@@ -29,6 +29,7 @@ group :development, :test do
   gem 'capybara'
   gem 'simplecov'
   gem 'launchy'
+  gem 'selenium-webdriver'
 end
 
 group :development do

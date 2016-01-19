@@ -15,6 +15,7 @@ class ActiveSupport::TestCase
   VCR.configure do |config|
     config.cassette_library_dir = "test/vcr_cassettes"
     config.hook_into :webmock
+    config.ignore_localhost = true
   end
 end
 
@@ -34,5 +35,10 @@ class ActionDispatch::IntegrationTest
 
   def teardown
     reset_session!
+    Capybara.use_default_driver
+  end
+
+  def require_js
+    Capybara.current_driver = :selenium
   end
 end

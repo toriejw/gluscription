@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Hurley v0.2
+      - Faraday v0.9.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -31,9 +31,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 14 Jan 2016 21:05:44 GMT
+      - Tue, 19 Jan 2016 17:52:03 GMT
       Etag:
-      - W/"15e2-B6Apn1/v849CA9bWCMH/fg"
+      - W/"15e2-P6CnB070Kzwd6b0Nt8Kdyg"
       Server:
       - openresty
       Vary:
@@ -63,7 +63,7 @@ http_interactions:
         IGRhdGEgaXMgYWNjdXJhdGUsIHlvdSBzaG91bGQgYXNzdW1lIGFsbCByZXN1
         bHRzIGFyZSB1bnZhbGlkYXRlZC4iLAogICAgImxpY2Vuc2UiOiAiaHR0cDov
         L29wZW4uZmRhLmdvdi9saWNlbnNlIiwKICAgICJsYXN0X3VwZGF0ZWQiOiAi
-        MjAxNi0wMS0wNyIsCiAgICAicmVzdWx0cyI6IHsKICAgICAgInNraXAiOiAw
+        MjAxNi0wMS0xNCIsCiAgICAicmVzdWx0cyI6IHsKICAgICAgInNraXAiOiAw
         LAogICAgICAibGltaXQiOiAxLAogICAgICAidG90YWwiOiAzMDkKICAgIH0K
         ICB9LAogICJyZXN1bHRzIjogWwogICAgewogICAgICAiZWZmZWN0aXZlX3Rp
         bWUiOiAiMjAxMzA3MTEiLAogICAgICAiaW5hY3RpdmVfaW5ncmVkaWVudCI6
@@ -183,5 +183,5 @@ http_interactions:
         bGF0ZSAoNSUpLCBPY3RvY3J5bGVuZSAoMS43JSksIE94eWJlbnpvbmUgKDMl
         KSIKICAgICAgXQogICAgfQogIF0KfQ==
     http_version: 
-  recorded_at: Thu, 14 Jan 2016 21:05:44 GMT
+  recorded_at: Tue, 19 Jan 2016 17:52:03 GMT
 recorded_with: VCR 3.0.0
