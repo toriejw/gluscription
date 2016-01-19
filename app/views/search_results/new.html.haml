@@ -17,7 +17,7 @@
   .col-md-3
   .col-md-6.text-center
     %br
-    = form_tag search_results_path, remote: true, html: { "data-type": "html", id: "create-search-bar" }, id: "create-search-bar" do
+    = form_tag search_results_path, remote: true, id: "create-search-bar" do
       .form-group
         = text_field_tag "drug", "", maxlength: 50, class: "form-control"
       = submit_tag "Search", class: "btn btn-info"
