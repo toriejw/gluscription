@@ -1,4 +1,4 @@
-class DrugsController < ApplicationController
+class SearchesController < ApplicationController
 
   def show
     @drug = Drug.new(params[:drug])
