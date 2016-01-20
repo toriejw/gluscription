@@ -6,17 +6,9 @@ require File.expand_path('../../config/environment', __FILE__)
 require "rails/test_help"
 require "capybara/rails"
 require "minitest/pride"
-require "webmock"
-require "vcr"
 
 class ActiveSupport::TestCase
   fixtures :all
-
-  VCR.configure do |config|
-    config.cassette_library_dir = "test/vcr_cassettes"
-    config.hook_into :webmock
-    config.ignore_localhost = true
-  end
 end
 
 class ActionDispatch::IntegrationTest
@@ -34,7 +26,7 @@ class ActionDispatch::IntegrationTest
   end
 
   def teardown
-    reset_session!
+    Capybara.reset_sessions!
     Capybara.use_default_driver
   end
 

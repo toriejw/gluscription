@@ -12,10 +12,8 @@ class SearchResultTest < ActiveSupport::TestCase
   end
 
   test "it can return formatted string of all its suspect ingredients" do
-    VCR.use_cassette("search_result#suspect_ingredients_formatted") do
-      result = create_search_result_with_ingredients
+    result = create_search_result_with_ingredients
 
-      assert_equal "rye, starch", result.suspect_ingredients_formatted
-    end
+    assert_equal "rye, starch", result.suspect_ingredients_formatted
   end
 end

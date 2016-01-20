@@ -15,14 +15,6 @@ module ApplicationHelper
     end
   end
 
-  def additional_info_or_search_again_button(drug)
-    if !drug.found? || !drug.has_ingredients?
-      button_to "Try another search", root_path, method: :get, class: "btn btn-info"
-    else
-      list_of_concerning_ingredients(drug)
-    end
-  end
-
   def list_of_concerning_ingredients(drug)
     if drug.dangerous_ingredients.empty?
       ingredients_list = "none"

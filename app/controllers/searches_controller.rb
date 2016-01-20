@@ -1,13 +1,18 @@
-class SearchResultsController < ApplicationController
+class SearchesController < ApplicationController
 
   respond_to :html, :xml, :json
 
   def new
   end
 
+  def show
+    @drug = Drug.new(params[:drug])
+    current_user.save_search(@drug) if current_user
+  end
+
   def create
     @drug = Drug.new(params[:drug])
-    
+
     if @drug.found?
       current_user.save_search(@drug) if current_user
 

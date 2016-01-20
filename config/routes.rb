@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: "search_results#new"
+  root to: "searches#new"
 
   get "/result",  to: "searches#show"
   get "/profile", to: "users#show"
@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   get "/logout",                 to: "sessions#destroy"
   get "auth/:provider/callback", to: "sessions#create"
 
-  resources :search_results, only: [:create]
+  resources :searches, only: [:create]
 
 end
