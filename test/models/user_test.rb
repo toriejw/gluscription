@@ -4,12 +4,12 @@ class UserTest < ActiveSupport::TestCase
 
   test "it can save a search" do
     user = User.create(name: "Dog")
-    old_user_search_count = user.search_results.count
+    old_user_search_count = user.searches.count
 
     user.save_search(Drug.new("hi"))
 
-    new_user_search_count = user.search_results.count
-    saved_result = user.search_results.first
+    new_user_search_count = user.searches.count
+    saved_result = user.searches.first
 
     assert_equal 1, new_user_search_count - old_user_search_count
 

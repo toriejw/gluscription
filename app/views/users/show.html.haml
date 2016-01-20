@@ -26,9 +26,9 @@
           %hr
         .col-md-1
 
-      - if !@search_results.empty?
-        - @search_results.each do |search_result|
-          = render search_result
+      - if !@searches.empty?
+        - @searches.each do |search|
+          = render search
       - else
         = content_tag :p, "You don't have any saved searches yet.", class: "user-show-page-well"
 

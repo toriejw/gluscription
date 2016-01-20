@@ -1,3 +1,3 @@
 class SuspectIngredient < ActiveRecord::Base
-  belongs_to :search_result
+  belongs_to :search
 end

@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-01-19T21:30:01-07:00">2016-01-19T21:30:01-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-01-19T22:37:09-07:00">2016-01-19T22:37:09-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         20.4
+         19.64
        </span>
     </span> hits/line)
   </h2>
@@ -181,13 +181,13 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#2e19aacb3d53206b53f55788bb7d001fc29eda77" class="src_link" title="app/models/search_result.rb">app/models/search_result.rb</a></td>
+        <td class="strong"><a href="#26bc84d3c568de6afbfe4a5f5e4046d5134598ed" class="src_link" title="app/models/search.rb">app/models/search.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>24</td>
         <td>8</td>
         <td>8</td>
         <td>0</td>
-        <td>17.1</td>
+        <td>2.1</td>
       </tr>
       
       <tr>
@@ -330,7 +330,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         37.01
+         35.49
        </span>
     </span> hits/line)
   </h2>
@@ -366,13 +366,13 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#2e19aacb3d53206b53f55788bb7d001fc29eda77" class="src_link" title="app/models/search_result.rb">app/models/search_result.rb</a></td>
+        <td class="strong"><a href="#26bc84d3c568de6afbfe4a5f5e4046d5134598ed" class="src_link" title="app/models/search.rb">app/models/search.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>24</td>
         <td>8</td>
         <td>8</td>
         <td>0</td>
-        <td>17.1</td>
+        <td>2.1</td>
       </tr>
       
       <tr>
@@ -1217,7 +1217,7 @@
         <li class="covered" data-hits="5" data-linenumber="5">
           <span class="hits">5</span>
           
-          <code class="ruby">      @search_results = current_user.search_results</code>
+          <code class="ruby">      @searches = current_user.searches</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
@@ -2310,9 +2310,9 @@
   </pre>
 </div>
       
-        <div class="source_table" id="2e19aacb3d53206b53f55788bb7d001fc29eda77">
+        <div class="source_table" id="26bc84d3c568de6afbfe4a5f5e4046d5134598ed">
   <div class="header">
-    <h3>app/models/search_result.rb</h3>
+    <h3>app/models/search.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>8</b> relevant lines. 
@@ -2327,7 +2327,7 @@
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
           
-          <code class="ruby">class SearchResult &lt; ActiveRecord::Base</code>
+          <code class="ruby">class Search &lt; ActiveRecord::Base</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="2">
@@ -2354,14 +2354,14 @@
           <code class="ruby">  def suspect_ingredients_formatted</code>
         </li>
       
-        <li class="covered" data-hits="54" data-linenumber="6">
-          <span class="hits">54</span>
+        <li class="covered" data-hits="4" data-linenumber="6">
+          <span class="hits">4</span>
           
           <code class="ruby">    if self.suspect_ingredients.empty?</code>
         </li>
       
-        <li class="covered" data-hits="42" data-linenumber="7">
-          <span class="hits">42</span>
+        <li class="covered" data-hits="2" data-linenumber="7">
+          <span class="hits">2</span>
           
           <code class="ruby">      &quot;none&quot;</code>
         </li>
@@ -2372,14 +2372,14 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="9">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
           
           <code class="ruby">      unique_ingredients = self.suspect_ingredients.pluck(:name).uniq</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="10">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="5" data-linenumber="10">
+          <span class="hits">5</span>
           
           <code class="ruby">      unique_ingredients.map { |ingredient| ingredient.strip }.join(&quot;, &quot;)</code>
         </li>
@@ -2423,7 +2423,7 @@
         <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby">  #   search_result = SearchResult.create( medication: drug.name,</code>
+          <code class="ruby">  #   search = Search.create( medication: drug.name,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
@@ -2447,7 +2447,7 @@
         <li class="never" data-hits="" data-linenumber="21">
           
           
-          <code class="ruby">  #     search_result.suspect_ingredients.create(name: ingredient)</code>
+          <code class="ruby">  #     search.suspect_ingredients.create(name: ingredient)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
@@ -2495,7 +2495,7 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  belongs_to :search_result</code>
+          <code class="ruby">  belongs_to :search</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
@@ -2531,7 +2531,7 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  has_many :search_results</code>
+          <code class="ruby">  has_many :searches</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
@@ -2603,13 +2603,13 @@
         <li class="covered" data-hits="3" data-linenumber="14">
           <span class="hits">3</span>
           
-          <code class="ruby">    search_results = SearchResult.create( medication: drug.name,</code>
+          <code class="ruby">    search = Search.create( medication: drug.name,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby">                                          gluten_free_status: drug.gluten_free?.to_s )</code>
+          <code class="ruby">                            gluten_free_status: drug.gluten_free?.to_s )</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
@@ -2627,7 +2627,7 @@
         <li class="covered" data-hits="2" data-linenumber="18">
           <span class="hits">2</span>
           
-          <code class="ruby">      search_results.suspect_ingredients.create(name: ingredient)</code>
+          <code class="ruby">      search.suspect_ingredients.create(name: ingredient)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
@@ -2645,7 +2645,7 @@
         <li class="covered" data-hits="3" data-linenumber="21">
           <span class="hits">3</span>
           
-          <code class="ruby">    self.search_results &lt;&lt; search_results</code>
+          <code class="ruby">    self.searches &lt;&lt; search</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">

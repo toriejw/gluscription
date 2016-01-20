@@ -195,19 +195,17 @@
         null,
         null
       ],
-      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/models/search_result.rb": [
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/models/search.rb": [
         1,
         1,
         1,
         null,
         1,
-        54,
-        42,
+        4,
+        2,
         null,
-        12,
-        25,
-        null,
-        null,
+        2,
+        5,
         null,
         null,
         null,
@@ -219,11 +217,8 @@
         null,
         null,
         null,
-        null
-      ],
-      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/models/suspect_ingredient.rb": [
-        1,
-        1,
+        null,
+        null,
         null
       ],
       "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/models/drug.rb": [
@@ -352,6 +347,11 @@
         null,
         null
       ],
+      "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/models/suspect_ingredient.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/Torie/Documents/turing/module_3/projects/gluscription/app/controllers/about_controller.rb": [
         1,
         null,
@@ -361,7 +361,7 @@
         null
       ]
     },
-    "timestamp": 1453264201
+    "timestamp": 1453268229
   },
   "Integration Tests": {
     "coverage": {

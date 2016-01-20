@@ -1,4 +1,4 @@
-class SearchResult < ActiveRecord::Base
+class Search < ActiveRecord::Base
   belongs_to :user
   has_many :suspect_ingredients
 
@@ -14,11 +14,11 @@ class SearchResult < ActiveRecord::Base
   # def save(drug)
   #   return unless drug.found?
   #
-  #   search_result = SearchResult.create( medication: drug.name,
+  #   search = Search.create( medication: drug.name,
   #                                        gluten_free_status: drug.gluten_free?.to_s )
   #
   #   drug.dangerous_ingredients.each do |ingredient|
-  #     search_result.suspect_ingredients.create(name: ingredient)
+  #     search.suspect_ingredients.create(name: ingredient)
   #   end
   # end
 end

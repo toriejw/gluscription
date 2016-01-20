@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   def show
     if current_user
-      @search_results = current_user.search_results
+      @searches = current_user.searches
     else
       redirect_to root_path
     end

@@ -5,6 +5,7 @@
 
 p {
   font-size: $p-font-size;
+  color: $font-color;
 }
 
 a {
@@ -44,4 +45,12 @@ a:hover {
 
 .log-in-or-create-account a {
   text-decoration: underline;
+}
+
+.search-result-well h1 {
+  font-size: 150%;
+}
+
+#result {
+  text-align: center;
 }
