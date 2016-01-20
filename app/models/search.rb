@@ -11,6 +11,14 @@ class Search < ActiveRecord::Base
     end
   end
 
+  def self.return_results(drug)
+    Drug.new(drug)
+  end
+
+  def self.not_found_notice
+    "<p class='not-found-notice'>Sorry, we could not find the medication you searched for.</p>"
+  end
+
   # def save(drug)
   #   return unless drug.found?
   #

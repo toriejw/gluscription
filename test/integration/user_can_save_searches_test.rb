@@ -6,6 +6,7 @@ class UserCanSaveSearchesTest < ActionDispatch::IntegrationTest
     require_js
     old_search_count = Search.count
     stub_omniauth
+
     visit root_path
     click_link "Log in with Facebook"
 
@@ -39,6 +40,8 @@ class UserCanSaveSearchesTest < ActionDispatch::IntegrationTest
     new_search_count = Search.count
 
     assert_equal 2, new_search_count - old_search_count
+
+    click_link "Log Out"
   end
 
   # test "searches for drugs that are not found are not saved" do
@@ -61,6 +64,8 @@ class UserCanSaveSearchesTest < ActionDispatch::IntegrationTest
   #
   #   assert page.has_content? "You don't have any saved searches yet."
   #   assert_equal 0, old_search_count - new_search_count
+  #
+  #   click_link "Log Out"
   # end
 
 end

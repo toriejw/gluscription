@@ -5,13 +5,13 @@
     .col-md-1
     .col-md-10.well.search-result-well
       %h1.text-center
-        = "#{@drug.name.upcase} "
-        = gluten_free_or_not_message(@drug)
+        = "#{drug.name.upcase} "
+        = gluten_free_or_not_message(drug)
 
       %br
 
       .text-center
-        = list_of_concerning_ingredients(@drug)
+        = list_of_concerning_ingredients(drug)
 
       %br
       %br
