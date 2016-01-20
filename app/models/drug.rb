@@ -1,5 +1,3 @@
-require_relative "../services/rx_norm_service.rb"
-
 class Drug
   attr_reader :name, :drug_data
   attr_accessor :dangerous_ingredients
@@ -22,7 +20,7 @@ class Drug
     if @drug_data["error"] || missing_rxcui
       "not found"
     else
-      RXnormService.find_drug_name(rxcui)
+      RxNormService.find_drug_name(rxcui)
     end
   end
 

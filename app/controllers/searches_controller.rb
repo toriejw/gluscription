@@ -5,11 +5,6 @@ class SearchesController < ApplicationController
   def new
   end
 
-  def show
-    @drug = Drug.new(params[:drug])
-    current_user.save_search(@drug) if current_user
-  end
-
   def create
     @drug = Drug.new(params[:drug])
 
@@ -18,21 +13,13 @@ class SearchesController < ApplicationController
 
       respond_with do |format|
         format.html do
-          if request.xhr?
-            render partial: "drugs/drug", locals: { drug: @drug }, layout: false
-          else
-            redirect_to result_path
-          end
+          render partial: "drugs/drug", locals: { drug: @drug }, layout: false
         end
       end
     else
       respond_with do |format|
         format.html do
-          if request.xhr?
-            render json: "<p class='not-found-notice'>Sorry, we could not find the medication you searched for.</p>"
-          else
-            render action: :new
-          end
+          render json: "<p class='not-found-notice'>Sorry, we could not find the medication you searched for.</p>"
         end
       end
     end

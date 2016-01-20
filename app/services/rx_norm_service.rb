@@ -1,6 +1,6 @@
 # require "hurley"
 
-class RXnormService
+class RxNormService
 
   def self.find_drug_name(rxcui)
     response      = get_response(rxcui)
