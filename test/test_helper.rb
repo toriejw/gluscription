@@ -25,6 +25,10 @@ class ActionDispatch::IntegrationTest
                        expires: "true" } })
   end
 
+  def setup
+    Capybara.reset_sessions!
+  end
+
   def teardown
     Capybara.reset_sessions!
     Capybara.use_default_driver

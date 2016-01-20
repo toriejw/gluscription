@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-01-20T13:15:02-07:00">2016-01-20T13:15:02-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-01-20T13:35:50-07:00">2016-01-20T13:35:50-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         21.01
+         18.53
        </span>
     </span> hits/line)
   </h2>
@@ -67,7 +67,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>11.0</td>
+        <td>14.2</td>
       </tr>
       
       <tr>
@@ -87,7 +87,7 @@
         <td>10</td>
         <td>10</td>
         <td>0</td>
-        <td>1.9</td>
+        <td>3.1</td>
       </tr>
       
       <tr>
@@ -97,7 +97,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>2.8</td>
+        <td>4.4</td>
       </tr>
       
       <tr>
@@ -177,7 +177,7 @@
         <td>55</td>
         <td>55</td>
         <td>0</td>
-        <td>55.5</td>
+        <td>46.3</td>
       </tr>
       
       <tr>
@@ -187,7 +187,7 @@
         <td>22</td>
         <td>22</td>
         <td>0</td>
-        <td>3.1</td>
+        <td>5.3</td>
       </tr>
       
       <tr>
@@ -207,7 +207,7 @@
         <td>13</td>
         <td>13</td>
         <td>0</td>
-        <td>2.7</td>
+        <td>3.3</td>
       </tr>
       
       <tr>
@@ -243,7 +243,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.97
+         4.92
        </span>
     </span> hits/line)
   </h2>
@@ -285,7 +285,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>11.0</td>
+        <td>14.2</td>
       </tr>
       
       <tr>
@@ -305,7 +305,7 @@
         <td>10</td>
         <td>10</td>
         <td>0</td>
-        <td>1.9</td>
+        <td>3.1</td>
       </tr>
       
       <tr>
@@ -315,7 +315,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>2.8</td>
+        <td>4.4</td>
       </tr>
       
     </tbody>
@@ -330,7 +330,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         34.32
+         29.43
        </span>
     </span> hits/line)
   </h2>
@@ -362,7 +362,7 @@
         <td>55</td>
         <td>55</td>
         <td>0</td>
-        <td>55.5</td>
+        <td>46.3</td>
       </tr>
       
       <tr>
@@ -372,7 +372,7 @@
         <td>22</td>
         <td>22</td>
         <td>0</td>
-        <td>3.1</td>
+        <td>5.3</td>
       </tr>
       
       <tr>
@@ -392,7 +392,7 @@
         <td>13</td>
         <td>13</td>
         <td>0</td>
-        <td>2.7</td>
+        <td>3.3</td>
       </tr>
       
     </tbody>
@@ -752,8 +752,8 @@
           <code class="ruby">  def current_user</code>
         </li>
       
-        <li class="covered" data-hits="51" data-linenumber="7">
-          <span class="hits">51</span>
+        <li class="covered" data-hits="67" data-linenumber="7">
+          <span class="hits">67</span>
           
           <code class="ruby">    @current_user ||= User.find(session[:user_id]) if session[:user_id]</code>
         </li>
@@ -1064,14 +1064,14 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="7">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="6" data-linenumber="7">
+          <span class="hits">6</span>
           
           <code class="ruby">    if user = User.from_omniauth(request.env[&#39;omniauth.auth&#39;])</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="8">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="6" data-linenumber="8">
+          <span class="hits">6</span>
           
           <code class="ruby">      session[:user_id] = user.id</code>
         </li>
@@ -1082,8 +1082,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="10">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="6" data-linenumber="10">
+          <span class="hits">6</span>
           
           <code class="ruby">    redirect_to profile_path</code>
         </li>
@@ -1106,14 +1106,14 @@
           <code class="ruby">  def destroy</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="14">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="14">
+          <span class="hits">3</span>
           
           <code class="ruby">    reset_session</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="15">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="15">
+          <span class="hits">3</span>
           
           <code class="ruby">    flash[:notice] = &quot;You have successfully logged out.&quot;</code>
         </li>
@@ -1124,8 +1124,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="17">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="17">
+          <span class="hits">3</span>
           
           <code class="ruby">    redirect_to root_path</code>
         </li>
@@ -1178,14 +1178,14 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="4">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="10" data-linenumber="4">
+          <span class="hits">10</span>
           
           <code class="ruby">    if current_user</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="5">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="5">
+          <span class="hits">8</span>
           
           <code class="ruby">      @searches = current_user.searches</code>
         </li>
@@ -1196,8 +1196,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="7">
+          <span class="hits">2</span>
           
           <code class="ruby">      redirect_to root_path</code>
         </li>
@@ -1328,20 +1328,20 @@
           <code class="ruby">    elsif gluten_free_status == :yes</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="10">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="10">
+          <span class="hits">3</span>
           
           <code class="ruby">      &quot;is gluten-free!&quot;</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="11">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="11">
+          <span class="hits">2</span>
           
           <code class="ruby">    elsif gluten_free_status == :maybe</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="12">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
           
           <code class="ruby">      &quot;may or may not be gluten-free.&quot;</code>
         </li>
@@ -1388,8 +1388,8 @@
           <code class="ruby">    if drug.dangerous_ingredients.empty?</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="20">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="20">
+          <span class="hits">4</span>
           
           <code class="ruby">      ingredients_list = &quot;none&quot;</code>
         </li>
@@ -1400,8 +1400,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="22">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="22">
+          <span class="hits">2</span>
           
           <code class="ruby">      ingredients_list = drug.dangerous_ingredients.uniq.join(&quot;, &quot;)</code>
         </li>
@@ -1766,14 +1766,14 @@
           <code class="ruby">  def gluten_free?</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="28">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="12" data-linenumber="28">
+          <span class="hits">12</span>
           
           <code class="ruby">    @dangerous_ingredients = []</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="29">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="12" data-linenumber="29">
+          <span class="hits">12</span>
           
           <code class="ruby">    if !has_ingredients?</code>
         </li>
@@ -1784,8 +1784,8 @@
           <code class="ruby">      :ingredients_not_listed</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="31">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="10" data-linenumber="31">
+          <span class="hits">10</span>
           
           <code class="ruby">    elsif contains_ingredients_with_gluten?</code>
         </li>
@@ -1796,14 +1796,14 @@
           <code class="ruby">      :no</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="33">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="8" data-linenumber="33">
+          <span class="hits">8</span>
           
           <code class="ruby">    elsif contains_questionable_ingredients?</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="34">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="3" data-linenumber="34">
+          <span class="hits">3</span>
           
           <code class="ruby">      :maybe</code>
         </li>
@@ -1844,8 +1844,8 @@
           <code class="ruby">  def contains_ingredients_with_gluten?</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="41">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="10" data-linenumber="41">
+          <span class="hits">10</span>
           
           <code class="ruby">    check_if_ingredients_include(gluten_containing_ingredients)</code>
         </li>
@@ -1868,8 +1868,8 @@
           <code class="ruby">  def contains_questionable_ingredients?</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="45">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="8" data-linenumber="45">
+          <span class="hits">8</span>
           
           <code class="ruby">    check_if_ingredients_include(possible_gluten_containing_ingredients)</code>
         </li>
@@ -1892,8 +1892,8 @@
           <code class="ruby">  def full_ingredient_list</code>
         </li>
       
-        <li class="covered" data-hits="443" data-linenumber="49">
-          <span class="hits">443</span>
+        <li class="covered" data-hits="365" data-linenumber="49">
+          <span class="hits">365</span>
           
           <code class="ruby">    inactive_ingredients + &quot; &quot; + active_ingredients</code>
         </li>
@@ -1922,8 +1922,8 @@
           <code class="ruby">    (@drug_data[&quot;results&quot;][0][&quot;inactive_ingredient&quot;] &amp;&amp;</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="54">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="12" data-linenumber="54">
+          <span class="hits">12</span>
           
           <code class="ruby">    @drug_data[&quot;results&quot;][0][&quot;active_ingredient&quot;] &amp;&amp;</code>
         </li>
@@ -2000,8 +2000,8 @@
           <code class="ruby">      # spaces around words are to make sure we match the word itself and not part of a word</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="67">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="10" data-linenumber="67">
+          <span class="hits">10</span>
           
           <code class="ruby">      [&quot; wheat &quot;, &quot; barley &quot;, &quot; rye &quot;, &quot; wheatberries &quot;, &quot; durum &quot;, &quot; emmer &quot;, &quot; semolina &quot;,</code>
         </li>
@@ -2042,8 +2042,8 @@
           <code class="ruby">    def possible_gluten_containing_ingredients</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="74">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="8" data-linenumber="74">
+          <span class="hits">8</span>
           
           <code class="ruby">      [&quot; oats &quot;, &quot; oat flour &quot;, &quot; grain flour &quot;, &quot; grain &quot;, &quot; starch &quot;, &quot; dextrin &quot;,</code>
         </li>
@@ -2078,8 +2078,8 @@
           <code class="ruby">    def raw_inactive_ingredients</code>
         </li>
       
-        <li class="covered" data-hits="455" data-linenumber="80">
-          <span class="hits">455</span>
+        <li class="covered" data-hits="375" data-linenumber="80">
+          <span class="hits">375</span>
           
           <code class="ruby">      @drug_data[&quot;results&quot;][0][&quot;inactive_ingredient&quot;][0]</code>
         </li>
@@ -2102,8 +2102,8 @@
           <code class="ruby">    def raw_active_ingredients</code>
         </li>
       
-        <li class="covered" data-hits="455" data-linenumber="84">
-          <span class="hits">455</span>
+        <li class="covered" data-hits="375" data-linenumber="84">
+          <span class="hits">375</span>
           
           <code class="ruby">      @drug_data[&quot;results&quot;][0][&quot;active_ingredient&quot;][0]</code>
         </li>
@@ -2126,8 +2126,8 @@
           <code class="ruby">    def inactive_ingredients</code>
         </li>
       
-        <li class="covered" data-hits="443" data-linenumber="88">
-          <span class="hits">443</span>
+        <li class="covered" data-hits="365" data-linenumber="88">
+          <span class="hits">365</span>
           
           <code class="ruby">      raw_inactive_ingredients.downcase</code>
         </li>
@@ -2150,8 +2150,8 @@
           <code class="ruby">    def active_ingredients</code>
         </li>
       
-        <li class="covered" data-hits="443" data-linenumber="92">
-          <span class="hits">443</span>
+        <li class="covered" data-hits="365" data-linenumber="92">
+          <span class="hits">365</span>
           
           <code class="ruby">      raw_active_ingredients.downcase</code>
         </li>
@@ -2198,14 +2198,14 @@
           <code class="ruby">    def check_if_ingredients_include(list)</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="100">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="18" data-linenumber="100">
+          <span class="hits">18</span>
           
           <code class="ruby">      list.each do |gluten_ingredient|</code>
         </li>
       
-        <li class="covered" data-hits="442" data-linenumber="101">
-          <span class="hits">442</span>
+        <li class="covered" data-hits="364" data-linenumber="101">
+          <span class="hits">364</span>
           
           <code class="ruby">        @dangerous_ingredients &lt;&lt; gluten_ingredient if full_ingredient_list.include?(gluten_ingredient)</code>
         </li>
@@ -2222,8 +2222,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="104">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="18" data-linenumber="104">
+          <span class="hits">18</span>
           
           <code class="ruby">      dangerous_ingredients?</code>
         </li>
@@ -2246,8 +2246,8 @@
           <code class="ruby">    def dangerous_ingredients?</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="108">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="18" data-linenumber="108">
+          <span class="hits">18</span>
           
           <code class="ruby">      !@dangerous_ingredients.empty?</code>
         </li>
@@ -2360,8 +2360,8 @@
           <code class="ruby">  def self.save(drug)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="14">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="2" data-linenumber="14">
+          <span class="hits">2</span>
           
           <code class="ruby">    search = create_search(drug)</code>
         </li>
@@ -2372,14 +2372,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="16">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="2" data-linenumber="16">
+          <span class="hits">2</span>
           
           <code class="ruby">    add_suspect_ingredients(search, drug)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="17">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="2" data-linenumber="17">
+          <span class="hits">2</span>
           
           <code class="ruby">    search</code>
         </li>
@@ -2402,14 +2402,14 @@
           <code class="ruby">  def suspect_ingredients_formatted</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="21">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="33" data-linenumber="21">
+          <span class="hits">33</span>
           
           <code class="ruby">    if self.suspect_ingredients.empty?</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="22">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="24" data-linenumber="22">
+          <span class="hits">24</span>
           
           <code class="ruby">      &quot;none&quot;</code>
         </li>
@@ -2420,14 +2420,14 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="24">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="9" data-linenumber="24">
+          <span class="hits">9</span>
           
           <code class="ruby">      unique_ingredients = self.suspect_ingredients.pluck(:name).uniq</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="25">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="19" data-linenumber="25">
+          <span class="hits">19</span>
           
           <code class="ruby">      unique_ingredients.map { |ingredient| ingredient.strip }.join(&quot;, &quot;)</code>
         </li>
@@ -2468,8 +2468,8 @@
           <code class="ruby">    def self.create_search(drug)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="32">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="2" data-linenumber="32">
+          <span class="hits">2</span>
           
           <code class="ruby">      Search.create( medication: drug.name,</code>
         </li>
@@ -2498,14 +2498,14 @@
           <code class="ruby">    def self.add_suspect_ingredients(search, drug)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="37">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="2" data-linenumber="37">
+          <span class="hits">2</span>
           
           <code class="ruby">      drug.dangerous_ingredients.each do |ingredient|</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="38">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="2" data-linenumber="38">
+          <span class="hits">2</span>
           
           <code class="ruby">        search.suspect_ingredients.create(name: ingredient)</code>
         </li>
@@ -2612,26 +2612,26 @@
           <code class="ruby">  def self.from_omniauth(user_data)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="5">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="6" data-linenumber="5">
+          <span class="hits">6</span>
           
           <code class="ruby">    user      = find_or_create_by(third_party_id: user_data[&quot;uid&quot;])</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="6">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="6" data-linenumber="6">
+          <span class="hits">6</span>
           
           <code class="ruby">    user.name = user_data[&quot;info&quot;][&quot;first_name&quot;]</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="7">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="6" data-linenumber="7">
+          <span class="hits">6</span>
           
           <code class="ruby">    user.save!</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="8">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="6" data-linenumber="8">
+          <span class="hits">6</span>
           
           <code class="ruby">    user</code>
         </li>
@@ -2666,14 +2666,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="14">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="2" data-linenumber="14">
+          <span class="hits">2</span>
           
           <code class="ruby">    search = Search.save(drug)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="15">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="2" data-linenumber="15">
+          <span class="hits">2</span>
           
           <code class="ruby">    self.searches &lt;&lt; search</code>
         </li>
