@@ -45,19 +45,16 @@ class UserCanSearchForADrugTest < ActionDispatch::IntegrationTest
     assert page.has_content?("Ingredients of concern: rye")
   end
 
-  # test "user sees not found notice when they search for a drug with no data" do
-  #     visit root_path
-  #
-  #     fill_in "drug", with: "bee venom"
-  #     click_button "Search"
-  #
-  #     assert_equal result_path, current_path
-  #     assert page.has_content? "Sorry, the FDA has not provided ingredients for this drug :("
-  #
-  #     click_button "Try another search"
-  #
-  #     assert_equal root_path, current_path
-  # end
+  test "user sees not found notice when they search for a drug with no data" do
+    require_js
+    visit root_path
+
+    fill_in "drug", with: "ra"
+    click_button "Search"
+
+    assert_equal root_path, current_path
+    assert page.has_content? "Sorry, the FDA has not provided ingredients for this drug :("
+  end
 
   test "user sees not found notice when they search for a drug that's not in the database" do
     require_js

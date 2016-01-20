@@ -9,16 +9,14 @@ class User < ActiveRecord::Base
   end
 
   def save_search(drug)
-    return unless drug.found?
+    return if ( !drug.found? || self.already_searched?(drug) )
 
-    search = Search.create( medication: drug.name,
-                            gluten_free_status: drug.gluten_free?.to_s )
-
-    drug.dangerous_ingredients.each do |ingredient|
-      search.suspect_ingredients.create(name: ingredient)
-    end
-
+    search = Search.save(drug)
     self.searches << search
+  end
+
+  def already_searched?(drug)
+    self.searches.find_by(medication: drug.name)
   end
 
 end

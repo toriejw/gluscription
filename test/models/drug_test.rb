@@ -33,10 +33,10 @@ class DrugTest < ActiveSupport::TestCase
     assert_equal :no, drug_with_gluten.gluten_free?
   end
 
-  # test "it knows if ingredient list is unavailable" do
-  #     bee_venom = Drug.new("bee venom")
-  #
-  #     assert_equal :ingredients_not_listed, bee_venom.gluten_free?
-  # end
+  test "it knows if ingredient list is unavailable" do
+    bee_venom = Drug.new("ra")
+
+    assert_equal :ingredients_not_listed, bee_venom.gluten_free?
+  end
 
 end
