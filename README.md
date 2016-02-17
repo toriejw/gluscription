@@ -6,6 +6,7 @@ Gluscription is an application that allows users with celiacs to search for pres
 
 To run locally:
 
-`git clone https://github.com/toriejw/gluscription.git`  
-`bundle`  
-`bundle exec rake db:migrate`  
+* `git clone https://github.com/toriejw/gluscription.git`  
+* `bundle`  
+* `bundle exec rake db:migrate`  
+* visit `http://localhost:3000/`
