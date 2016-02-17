@@ -1,10 +1,8 @@
 # README
 
-[Live version](http://gluscription.herokuapp.com/)
-
 ## Description
 
-Gluscription is an application that allows users with celiacs to search for prescription and OTC drugs, and find out if they are safe. It uses the OpenFDA API to search for drugs. It was a two-week individual project for Turing School. 
+Gluscription is an application that allows users with celiacs to search for prescription and OTC drugs, and find out if they are safe. It uses the OpenFDA API to search for drugs. It was a two-week individual project for Turing School. The live version of the app can be found here: [http://gluscription.herokuapp.com/](http://gluscription.herokuapp.com/).
 
 
 ![](http://g.recordit.co/HJEiwA2isk.gif)
