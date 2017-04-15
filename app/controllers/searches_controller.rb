@@ -12,6 +12,7 @@ class SearchesController < ApplicationController
       Search.save(@search_results)
       respond_with_results(@search_results)
     else
+      Search.save_failed_search(params[:drug])
       respond_with_not_found(@search_results)
     end
   end

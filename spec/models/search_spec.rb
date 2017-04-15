@@ -38,4 +38,13 @@ RSpec.describe Search, type: :model do
     expect(saved_search.suspect_ingredients_formatted).to eq("starch")
   end
 
+  describe "#save_failed_search" do
+    it "saves a failed search" do
+      search = Search.save_failed_search("drug name")
+
+      expect(search.medication).to eq "drug name"
+      expect(search.gluten_free_status).to eq "search failed"
+    end
+  end
+
 end

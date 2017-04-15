@@ -16,6 +16,11 @@ class Search < ActiveRecord::Base
     search
   end
 
+  def self.save_failed_search(drug_name)
+    Search.create( medication: drug_name,
+                   gluten_free_status: "search failed" )
+  end
+
   def suspect_ingredients_formatted
     if self.suspect_ingredients.empty?
       "none"
