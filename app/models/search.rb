@@ -1,5 +1,4 @@
 class Search < ActiveRecord::Base
-  belongs_to :user
   has_many :suspect_ingredients
 
   def self.return_results(drug)

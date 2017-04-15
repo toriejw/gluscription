@@ -9,7 +9,7 @@ class SearchesController < ApplicationController
     @search_results = Search.return_results(params[:drug])
 
     if @search_results.found?
-      current_user.save_search(@search_results) if current_user
+      Search.save(@search_results)
       respond_with_results(@search_results)
     else
       respond_with_not_found(@search_results)
