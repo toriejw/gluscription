@@ -1,4 +1,4 @@
-class Drug
+class FDADrug
   attr_reader :name, :drug_data
   attr_accessor :dangerous_ingredients
 

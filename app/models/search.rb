@@ -3,7 +3,7 @@ class Search < ActiveRecord::Base
   has_one :medication
 
   def self.return_results(drug)
-    Drug.new(drug)
+    FDADrug.new(drug)
   end
 
   def self.not_found_notice

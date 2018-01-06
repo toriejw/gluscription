@@ -27,7 +27,7 @@ RSpec.describe Search, type: :model do
   it "can save an instance of a medication" do
     old_saved_results_count = Search.count
 
-    drug         = Drug.new("tylenol")
+    drug         = FDADrug.new("tylenol")
     saved_search = Search.save(drug)
 
     new_saved_results_count = Search.count
