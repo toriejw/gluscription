@@ -6,13 +6,11 @@ class SearchesController < ApplicationController
   end
 
   def create
-    @search_results = Search.return_results(params[:drug])
+    @search_results = MedicationSearchHandler.handle(params[:drug])
 
     if @search_results.found?
-      Search.save(@search_results)
       respond_with_results(@search_results)
     else
-      Search.save_failed_search(params[:drug])
       respond_with_not_found(@search_results)
     end
   end
