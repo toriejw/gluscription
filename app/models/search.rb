@@ -1,5 +1,6 @@
 class Search < ActiveRecord::Base
   has_many :suspect_ingredients
+  has_one :medication
 
   def self.return_results(drug)
     Drug.new(drug)
