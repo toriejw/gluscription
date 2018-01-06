@@ -1,6 +1,5 @@
 class Search < ActiveRecord::Base
   has_many :suspect_ingredients
-  has_one :medication
 
   def self.return_results(drug)
     FDADrug.new(drug)
@@ -10,16 +9,17 @@ class Search < ActiveRecord::Base
     "<p class='not-found-notice'>Sorry, we could not find the medication you searched for.</p>"
   end
 
-  def self.save(drug)
-    search = create_search(drug)
+  def self.save(drug, search_term)
+    search = create_search(drug, search_term)
 
     add_suspect_ingredients(search, drug)
     search
   end
 
   def self.save_failed_search(drug_name)
-    Search.create( medication: drug_name,
-                   gluten_free_status: "search failed" )
+    Search.create( medication: drug_name.downcase,
+                   gluten_free_status: "search failed",
+                   search_term: drug_name.downcase )
   end
 
   def suspect_ingredients_formatted
@@ -33,9 +33,10 @@ class Search < ActiveRecord::Base
 
   private
 
-    def self.create_search(drug)
-      Search.create( medication: drug.name,
-                     gluten_free_status: drug.gluten_free?.to_s )
+    def self.create_search(drug, search_term)
+      Search.create( medication: drug.name.downcase,
+                     gluten_free_status: drug.gluten_free?.to_s,
+                     search_term: search_term.downcase )
     end
 
     def self.add_suspect_ingredients(search, drug)

@@ -20,7 +20,7 @@ RSpec.describe Search, type: :model do
   it "can return unsaved search results" do
     results = Search.return_results("tylenol")
 
-    expect(results.name).to eq("Acetaminophen 500 MG Oral Capsule [Mapap]")
+    expect(results.name).to eq("Acetaminophen 160 MG Chewable Tablet")
     expect(results.gluten_free?).to eq(:maybe)
   end
 
@@ -28,12 +28,12 @@ RSpec.describe Search, type: :model do
     old_saved_results_count = Search.count
 
     drug         = FDADrug.new("tylenol")
-    saved_search = Search.save(drug)
+    saved_search = Search.save(drug, "search-term")
 
     new_saved_results_count = Search.count
 
     expect(new_saved_results_count - old_saved_results_count).to eq(1)
-    expect(saved_search.medication).to eq("Acetaminophen 500 MG Oral Capsule [Mapap]")
+    expect(saved_search.medication).to eq("Acetaminophen 160 MG Chewable Tablet".downcase)
     expect(saved_search.gluten_free_status).to eq("maybe")
     expect(saved_search.suspect_ingredients_formatted).to eq("starch")
   end
